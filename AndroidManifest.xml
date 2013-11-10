@@ -1,5 +1,3 @@
-<<<<<<< Original
-<<<<<<< Original
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.mengker.dreamdiary"
@@ -24,32 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
-
-</manifest>
-
-=======
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <application>
-        <activity android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            >
+        <activity
+            android:name="org.mengker.dreamdiary.RecordActivity"
+            android:label="@string/title_activity_record" >
+        </activity>
+        <activity
+            android:name="org.mengker.dreamdiary.RegisterActivity"
+            android:label="@string/title_activity_register" >
         </activity>
     </application>
 
 </manifest>
->>>>>>> Added
-
-=======
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <application>
-        <activity android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            >
-        </activity>
-    </application>
-
-</manifest>
->>>>>>> Added
