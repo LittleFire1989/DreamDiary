@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/record_vertical_margin"
+    android:paddingLeft="@dimen/record_horizontal_margin"
+    android:paddingRight="@dimen/record_horizontal_margin"
+    android:paddingTop="@dimen/record_vertical_margin"
+    tools:context=".Record_default" >
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/done_button" />
+
+    <Button
+        android:id="@+id/moreOptionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/doneButton"
+        android:layout_alignBottom="@+id/doneButton"
+        android:layout_alignParentRight="true"
+        android:text="@string/more_option_button" />
+
+    <RadioGroup
+        android:id="@+id/selectRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/doneButton"
+        android:layout_below="@+id/doneButton"
+        android:layout_marginTop="16dp" >
+
+        <RadioButton
+            android:id="@+id/normalRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/normal_radioButton" />
+
+        <RadioButton
+            android:id="@+id/halfLucidRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Half_lucid_radioButton" />
+
+        <RadioButton
+            android:id="@+id/lucidRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lucid_radioButton" />
+    </RadioGroup>
+
+</RelativeLayout>
