@@ -7,4 +7,5 @@ public class PushTest {
 	//local
 	//local 1
 	int i=0;
+	int j=1;
 }
