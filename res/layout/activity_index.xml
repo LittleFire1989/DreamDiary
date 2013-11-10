@@ -13,7 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        android:text="@string/test_login_activity_button" />
+        android:text="@string/test_login_activity_button" 
+        android:onClick="startLoginActivity"/>
 
     <Button
         android:id="@+id/testRegisterActivityButton"
@@ -21,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/testLoginActivityButton"
         android:layout_below="@+id/testLoginActivityButton"
-        android:text="@string/test_register_activity_button" />
+        android:text="@string/test_register_activity_button" 
+        android:onClick="startRegisterActivity"/>
 
     <Button
         android:id="@+id/testRecordActivityButton"
@@ -29,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/testRegisterActivityButton"
         android:layout_below="@+id/testRegisterActivityButton"
-        android:text="@string/test_record_activity_button" />
+        android:text="@string/test_record_activity_button" 
+        android:onClick="startRecordActivity"/>
 
 </RelativeLayout>

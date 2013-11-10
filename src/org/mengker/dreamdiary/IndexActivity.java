@@ -21,38 +21,9 @@ public class IndexActivity extends Activity {
 		testLoginActivityButton= (Button) findViewById(R.id.testLoginActivityButton);
 		testRegisterActivityButton= (Button) findViewById(R.id.testRegisterActivityButton);
 		testRecordActivityButton= (Button) findViewById(R.id.testRecordActivityButton);
-		
-//		final Intent loginIntent = new Intent(this, LoginActivity.class);
-//		final Intent RecordIntent = new Intent(this, RecordActivity.class);
-//		final Intent RegisterIntent = new Intent(this, RegisterActivity.class);
-//		
+			
 		setContentView(R.layout.activity_index);
 		
-//		testLoginActivityButton.setOnClickListener(new OnClickListener(){
-//			public void onClick(View v) {
-//
-//				startActivity(loginIntent);
-//				
-//			}
-//		});
-//		
-//		testRegisterActivityButton.setOnClickListener(new OnClickListener(){
-//			public void onClick(View v) {
-//
-//				startActivity(RecordIntent);
-//				
-//			}
-//		});
-//		
-//		testRecordActivityButton.setOnClickListener(new OnClickListener(){
-//			public void onClick(View v) {
-//
-//				startActivity(RegisterIntent);
-//				
-//			}
-//		});
-//		
-//		
 	}
 
 	@Override
@@ -60,6 +31,21 @@ public class IndexActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.index, menu);
 		return true;
+	}
+	
+	public void startLoginActivity(View view) {
+	    Intent intent = new Intent(this, LoginActivity.class);
+	    startActivity(intent);
+	}
+	
+	public void startRegisterActivity(View view) {
+	    Intent intent = new Intent(this, RegisterActivity.class);
+	    startActivity(intent);
+	}
+	
+	public void startRecordActivity(View view) {
+	    Intent intent = new Intent(this, RecordActivity.class);
+	    startActivity(intent);
 	}
 
 }
