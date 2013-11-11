@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="login_horizontal_margin">2dp</dimen>
+   
     <dimen name="login_vertical_margin">12dp</dimen>
     <dimen name="register_horizontal_margin">2dp</dimen>
     <dimen name="register_vertical_margin">10dp</dimen>
@@ -10,5 +10,8 @@
     <dimen name="record_vertical_margin">3dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="bottom_tab_padding_drawable">1.0dip</dimen>
+	<dimen name="bottom_tab_padding_up">2.0dip</dimen>
+	<dimen name="bottom_tab_font_size">10.0dip</dimen>
 
 </resources>
