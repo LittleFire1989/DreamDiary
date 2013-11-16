@@ -48,6 +48,5 @@
     			android:id="@+id/radio_button3"
     			style="@style/main_tab_bottom"/>
     	</RadioGroup>
-    	<test>Push without pull</test>
-    	<test> push after pull</test>
+    
 </LinearLayout>
