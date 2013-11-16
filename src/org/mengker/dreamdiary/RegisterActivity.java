@@ -27,11 +27,13 @@ public class RegisterActivity extends Activity {
                 // TODO Auto-generated method stub
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_register);
-                final EditText mEditText1=(EditText)findViewById(R.id.editText1);
-                final EditText mEditText2=(EditText)findViewById(R.id.editText2);
-                mTextView3=(TextView)findViewById(R.id.textView3);
-                final Button mButton=(Button)findViewById(R.id.button1);
-                mButton2=(Button)findViewById(R.id.button2);
+                final EditText mEditText1=(EditText)findViewById(R.id.addUsernameEditText);
+                final EditText mEditText2=(EditText)findViewById(R.id.addEmailEditText);
+                final EditText mEditText3=(EditText)findViewById(R.id.addPasswordEditText);
+                final EditText mEditText4=(EditText)findViewById(R.id.rePasswordEditText);
+                mTextView3=(TextView)findViewById(R.id.createAccountTextView);
+                final Button mButton=(Button)findViewById(R.id.createButton);
+                mButton2=(Button)findViewById(R.id.createButton);
                 //~~~~~~~~~~~~~~注册QQ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 mButton.setOnClickListener(new OnClickListener() {
                         

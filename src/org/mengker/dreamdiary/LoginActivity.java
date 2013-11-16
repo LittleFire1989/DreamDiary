@@ -15,11 +15,11 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        final EditText mEditText1=(EditText)findViewById(R.id.editText1);
-        final EditText mEditText2=(EditText)findViewById(R.id.editText2);
-        final Button mButton1=(Button)findViewById(R.id.button1);
-        final Button mButton2=(Button)findViewById(R.id.button2);
-        final Button mButton3=(Button)findViewById(R.id.button3);
+        final EditText mEditText1=(EditText)findViewById(R.id.usernameEditText);
+        final EditText mEditText2=(EditText)findViewById(R.id.passwordEditText);
+        final Button mButton1=(Button)findViewById(R.id.loginButton);
+        final Button mButton2=(Button)findViewById(R.id.facebookLoginButton);
+        final Button mButton3=(Button)findViewById(R.id.registerButton);
         mEditText1.setHint("Username");
         mEditText2.setHint("Password");
         //~~~~~~~~~~~~~~登录~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
