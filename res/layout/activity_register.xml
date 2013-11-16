@@ -1,4 +1,117 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"   >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/register_background5"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30.0px"
+            android:layout_marginRight="30.0px"
+            android:layout_marginTop="150.0px"
+            android:orientation="vertical" >
+            
+            <TextView
+		        android:id="@+id/createAccountTextView"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#F8F8FF"
+                android:textSize="16sp"
+		        android:text="@string/create_account_text_view" />
+		    
+		    <EditText
+		        android:id="@+id/addUsernameEditText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:ems="10"
+		        android:inputType="text"
+		        android:hint="@string/add_username_edit_text"
+		        android:textColor="#F8F8FF"
+                android:textSize="14sp"/>
+		    
+		    <EditText
+		        android:id="@+id/addEmailEditText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:ems="10"
+		        android:inputType="textEmailAddress"
+		        android:textColor="#F8F8FF"
+                android:textSize="14sp"
+		        android:hint="@string/add_email_edit_text" />
+		    
+		    <EditText
+		        android:id="@id/addPasswordEditText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:ems="10"
+		        android:hint="@string/add_password_edit_text"
+		        android:inputType="text|textPassword"
+		        android:textColor="#F8F8FF"
+		        android:textSize="14sp" />
+
+		    <EditText
+		        android:id="@id/rePasswordEditText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:ems="10"
+		        android:hint="@string/repassword_edit_text"
+		        android:inputType="textPassword"
+		        android:textColor="#F8F8FF"
+		        android:textSize="14sp" />
+
+		        
+		        
+		  
+		         
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	</LinearLayout>
+	<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="-44.0dip"
+			android:background="@drawable/amsu_menu_toolbar_bg" >
+		    
+		    <Button
+		        android:id="@+id/createButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="250.0dip"
+		        android:layout_marginTop="2.0dip"
+		        android:background="@drawable/amsu_menu_toolbar_bg"
+		        android:text="@string/create_button"
+		        android:textColor="#F8F8FF"
+		        android:textSize="14sp" />	 
+	</LinearLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+<!--  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -76,3 +189,4 @@
         android:text="@string/create_button" />
 
 </RelativeLayout>
+-->

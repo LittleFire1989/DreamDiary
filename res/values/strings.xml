@@ -32,6 +32,7 @@
     <!-- register page -->
     <string name="create_account_text_view">Create a Mengker Account</string>
     <string name="add_username_edit_text">Username</string>
+    <string name="add_username">Register with Email Address</string>
     <string name="add_email_edit_text">Email Address</string>
     <string name="add_password_edit_text">Passward</string>
     <string name="repassword_edit_text">Re-password</string>
