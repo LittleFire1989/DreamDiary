@@ -47,7 +47,6 @@ public final class R {
         public static final int login_background=0x7f02000e;
     }
     public static final class id {
-        public static final int  @+id/linearLayout=0x7f080003;
         public static final int action_settings=0x7f08001d;
         public static final int addEmailEditText=0x7f080019;
         public static final int addPasswordEditText=0x7f08001a;
