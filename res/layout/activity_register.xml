@@ -69,19 +69,8 @@
 		        android:inputType="textPassword"
 		        android:textColor="#F8F8FF"
 		        android:textSize="14sp" />
-
-		        
-		        
-		  
 		         
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewTest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Small Text"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
 
 	</LinearLayout>
 	<LinearLayout
