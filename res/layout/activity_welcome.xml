@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/welcome_background4"
+        android:background="@drawable/welcome_background6"
         android:orientation="vertical" >
 </LinearLayout>
 </LinearLayout>
