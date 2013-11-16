@@ -135,7 +135,7 @@
             android:layout_marginLeft="250.0dip"
             android:layout_marginTop="2.0dip"
 
-	        android:text="@string/skip_button"/> 
+	        android:text="@string/skip_button" /> 
     </LinearLayout>
     
 </LinearLayout>
