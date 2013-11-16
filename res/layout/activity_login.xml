@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10.0px"
             android:layout_marginRight="10.0px"
-            android:layout_marginTop="20.0px"
+            android:layout_marginTop="30.0px"
             android:orientation="vertical" >
             
             <LinearLayout
@@ -26,18 +26,22 @@
                 android:orientation="vertical" >
                         
                 <TextView
-					android:id="@+id/usernameTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:text="@string/username_text_view" />
+                    android:id="@+id/usernameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username_text_view"
+                    android:textColor="#F8F8FF"
+                    android:textSize="16sp" />
                        
                 <EditText
                     android:id="@+id/usernameEditText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/username"
- 					android:inputType="text|textEmailAddress"
-                    android:text="@string/username_edit_text" />
+                    android:inputType="text|textEmailAddress"
+                    android:text="@string/username_edit_text"
+                    android:textSize="12sp" />
+
 			</LinearLayout>
 					    
 			<LinearLayout
@@ -49,14 +53,18 @@
 			    <TextView
 			        android:id="@+id/paswordTextView"
 			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"    
-			        android:text="@string/password_text_view" />
+			        android:layout_height="wrap_content"
+			        android:text="@string/password_text_view"
+			        android:textColor="#F8F8FF"
+			        android:textSize="16sp" />
+
 	 			<EditText
 					android:id="@+id/passwordEditText"
 					android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 					android:hint="@string/password"
-					android:inputType="textPassword" />
+					android:inputType="textPassword"
+					android:textSize="12sp" />
 			</LinearLayout>
 		</LinearLayout>
 
@@ -72,14 +80,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10.0px"
+                android:layout_marginTop="60.0px"
                 android:orientation="vertical" >
 
 			    <Button
 			        android:id="@+id/loginButton"
 			        android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			        android:layout_marginLeft="10.0px"
-			        android:textColor="#ff222222"
+			        android:textColor="#F8F8FF"
+			        android:layout_marginLeft="2.0px"
+			        android:layout_marginRight="8.0px"
 		            android:textSize="16.0sp"
 			        android:text="@string/login_button" />
 			</LinearLayout>
@@ -88,14 +98,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10.0px"
+                
                 android:orientation="vertical" >
 			    
 			    <Button
 			        android:id="@+id/facebookLoginButton"
 			        android:layout_width="match_parent"
 			        android:layout_height="wrap_content"
-			 		android:layout_marginLeft="10.0px"
-			        android:textColor="#ff222222"
+			        android:textColor="#F8F8FF"
+			 		android:layout_marginLeft="2.0px"
+			 		android:layout_marginRight="8.0px"
 		            android:textSize="16.0sp"
 			        android:text="@string/facebook_login_button" />
 			</LinearLayout>
@@ -110,9 +122,10 @@
 				    android:id="@+id/registerButton"
 				    android:layout_width="match_parent"
 				    android:layout_height="wrap_content"
-				    android:layout_marginleft="12.0px"
+				    android:textColor="#F8F8FF"
+			 		android:layout_marginLeft="2.0px"
+			 		android:layout_marginRight="8.0px"
 				    android:text="@string/register_button"
-				    android:textColor="#ff222222"
 				    android:textSize="16.0sp" />
 
 			</LinearLayout>
@@ -132,10 +145,13 @@
 	        android:id="@+id/skipButton"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-            android:layout_marginLeft="250.0dip"
-            android:layout_marginTop="2.0dip"
-
-	        android:text="@string/skip_button" /> 
+	        android:layout_marginLeft="250.0dip"
+	        android:layout_marginTop="2.0dip"
+	        android:background="@drawable/amsu_menu_toolbar_bg"
+	        android:text="@string/skip_button"
+	        android:textColor="#F8F8FF"
+	        android:textSize="14sp" />
+ 
     </LinearLayout>
     
 </LinearLayout>
