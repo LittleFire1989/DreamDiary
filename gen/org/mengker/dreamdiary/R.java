@@ -67,7 +67,7 @@ public final class R {
         public static final int radio_button1=0x7f08000e;
         public static final int radio_button2=0x7f08000f;
         public static final int radio_button3=0x7f080010;
-        public static final int rePassowrdEditText=0x7f08001b;
+        public static final int rePasswordEditText=0x7f08001b;
         public static final int registerButton=0x7f08000a;
         public static final int selectRadioGroup=0x7f080013;
         public static final int skipButton=0x7f08000b;
