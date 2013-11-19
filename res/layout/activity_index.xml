@@ -33,5 +33,12 @@
         android:layout_below="@+id/testRegisterActivityButton"
         android:text="@string/test_record_activity_button" 
         android:onClick="startRecordActivity"/>
+    
+     <Button
+        android:id="@+id/testShareActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test_share_activity_button" 
+        android:onClick="startShareActivity"/>
 
 </RelativeLayout>

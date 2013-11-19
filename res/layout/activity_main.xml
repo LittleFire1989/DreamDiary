@@ -26,13 +26,13 @@
     		<RadioButton 
     			android:layout_marginTop="1.0dip"
     			android:text="@string/dream_record"
-    			android:drawableTop="@drawable/amsu_menu_publish"
+    			android:drawableTop="@drawable/btn_write_selector"
     			android:id="@+id/radio_button0"
     			style="@style/main_tab_bottom"/>
     		<RadioButton 
     			android:layout_marginTop="1.0dip"
     			android:text="@string/dream_diary"
-    			android:drawableTop="@drawable/amsu_menu_diary"
+    			android:drawableTop="@drawable/logo_ss"
     			android:id="@+id/radio_button1"
     			style="@style/main_tab_bottom"/>
     		<RadioButton 
