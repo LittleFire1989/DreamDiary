@@ -1,10 +1,14 @@
 package org.mengker.dreamdiary;
 
+import org.mengker.dream.Dream;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
 public class RecordActivity extends Activity {
+	
+	private Dream dream;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
