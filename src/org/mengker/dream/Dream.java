@@ -1,6 +1,7 @@
 package org.mengker.dream;
 
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /* To be modified:
@@ -12,17 +13,16 @@ import java.util.Date;
 
 public class Dream {
 	public static String[] DEFAULT_KEYWORDS = { "middle school", "fly", "chase" };
-	public static final short NORMAL = 1;
-	public static final short HALFLUCID = 2;
-	public static final short LUCID = 3;
+	public static final int NORMAL = 1;
+	public static final int HALFLUCID = 2;
+	public static final int LUCID = 3;
 
 	private String[] keywords;
-	private short lucidity;
+	private int lucidity;
 	private Date sleepStartTime;
 	private Date sleepEndTime;
 	private Date lastEditedTime;
-	private Note note;
-	private Recording[] recordings;
+	private ArrayList<DreamNote> scenarios;
 
 	// Methods that set and get attributes
 
@@ -45,20 +45,18 @@ public class Dream {
 	public void setLastEditedTime(Date lastEditedTime) {
 		this.lastEditedTime = lastEditedTime;
 	}
-
-	public void setNote(Note note) {
-		this.note = note;
+	
+	public void setScenarios(ArrayList<DreamNote> scenarios){
+		this.scenarios = scenarios;
 	}
 
-	public void setRecordings(Recording[] recordings) {
-		this.recordings = recordings;
-	}
-
+	
+	//gets
 	public String[] getKeywords() {
 		return this.keywords;
 	}
 
-	public short getLucidity() {
+	public int getLucidity() {
 		return this.lucidity;
 	}
 
@@ -73,12 +71,9 @@ public class Dream {
 	public Date getLastEditedTime() {
 		return this.lastEditedTime;
 	}
-	public Note getNote() {
-		
-		return this.note;
-	}
-	public Recording[] getRecordings() {
-		return this.recordings;
+	
+	public ArrayList<DreamNote> getScenarios(){
+		return this.scenarios;
 	}
 
 	// publish
@@ -109,48 +104,4 @@ public class Dream {
 
 	
 	// inner classes: Note, Recording
-
-	class Note {
-		private String content;
-		private Date lastEditedTime;
-		
-		// gets		
-		public String getContent(){
-			return content;
-		}
-		public Date getLastEditedTime(){
-			return this.lastEditedTime;
-		}
-		
-		// sets
-		public void setContent(String content){
-			this.content = content;
-		}
-		public void setLastEditedTime(Date lastEditedTime){
-			this.lastEditedTime = lastEditedTime;
-		}
-		
-		
-		// others
-		public void edit() {
-
-		}
-
-		public void delete() {
-
-		}
-	}
-
-	class Recording {
-		private Date startTime;
-		private Date endTime;
-
-		public void record() {
-
-		}
-
-		public void delete() {
-
-		}
-	}
 }

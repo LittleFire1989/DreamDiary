@@ -9,6 +9,8 @@ import android.view.Menu;
 public class RecordActivity extends Activity {
 	
 	private Dream dream;
+	private int lucidity;
+	private String content;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
