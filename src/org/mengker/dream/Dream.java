@@ -22,7 +22,7 @@ public class Dream {
 	private Date sleepStartTime;
 	private Date sleepEndTime;
 	private Date lastEditedTime;
-	private ArrayList<DreamNote> scenarios;
+	private ArrayList<ScenarioNote> scenarios;
 
 	// Methods that set and get attributes
 
@@ -46,7 +46,7 @@ public class Dream {
 		this.lastEditedTime = lastEditedTime;
 	}
 	
-	public void setScenarios(ArrayList<DreamNote> scenarios){
+	public void setScenarios(ArrayList<ScenarioNote> scenarios){
 		this.scenarios = scenarios;
 	}
 
@@ -72,7 +72,7 @@ public class Dream {
 		return this.lastEditedTime;
 	}
 	
-	public ArrayList<DreamNote> getScenarios(){
+	public ArrayList<ScenarioNote> getScenarios(){
 		return this.scenarios;
 	}
 
