@@ -50,6 +50,7 @@
     <string name="title_activity_record">RecordActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_index">IndexActivity</string>
+    <string name="test_dream_record">Test</string>
 
     <!-- welcome -->
     <string name="welcome_title_text">Dream Diray</string>
