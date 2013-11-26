@@ -38,29 +38,37 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30.0px"
             android:orientation="horizontal" >
-
-            <RadioButton
-                android:id="@+id/normalRadio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="@string/normal_radioButton"
-                android:textColor="#F8F8FF" />
-
-            <RadioButton
-                android:id="@+id/halfLucidRadio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Half_lucid_radioButton"
-                android:textColor="#F8F8FF" />
-
-            <RadioButton
-                android:id="@+id/lucidRadio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="0dip"
-                android:text="@string/lucid_radioButton"
-                android:textColor="#F8F8FF" />
+            
+            <RadioGroup 
+				android:id="@+id/lucidityRadioGroup"
+	    		android:orientation="horizontal"
+	    		android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:gravity="center_vertical">
+	    		
+	            <RadioButton
+	                android:id="@+id/normalRadio"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:checked="true"
+	                android:text="@string/normal_radioButton"
+	                android:textColor="#F8F8FF" />
+	
+	            <RadioButton
+	                android:id="@+id/halfLucidRadio"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/Half_lucid_radioButton"
+	                android:textColor="#F8F8FF" />
+	
+	            <RadioButton
+	                android:id="@+id/lucidRadio"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="0dip"
+	                android:text="@string/lucid_radioButton"
+	                android:textColor="#F8F8FF" />
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
