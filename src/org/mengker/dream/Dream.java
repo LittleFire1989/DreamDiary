@@ -23,6 +23,7 @@ public class Dream {
 	private Date sleepEndTime;
 	private Date lastEditedTime;
 	private ArrayList<ScenarioNote> scenarios;
+	private String abstraction; 
 
 	// Methods that set and get attributes
 
@@ -49,6 +50,9 @@ public class Dream {
 	public void setScenarios(ArrayList<ScenarioNote> scenarios){
 		this.scenarios = scenarios;
 	}
+	public void setAbstraction(String abstraction){
+		this.abstraction = abstraction;
+	}
 
 	
 	//gets
@@ -74,6 +78,9 @@ public class Dream {
 	
 	public ArrayList<ScenarioNote> getScenarios(){
 		return this.scenarios;
+	}
+	public String getAbstraction(){
+		return this.abstraction;
 	}
 
 	// publish
