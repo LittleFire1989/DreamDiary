@@ -94,13 +94,15 @@ public final class R {
     }
     public static final class id {
         public static final int Msglist=0x7f090024;
-        public static final int action_settings=0x7f09002c;
+        public static final int actionVoice=0x7f090030;
+        public static final int action_settings=0x7f09002d;
         public static final int addEmailEditText=0x7f09001d;
         public static final int addPasswordEditText=0x7f09001e;
         public static final int addUsernameEditText=0x7f09001c;
         public static final int chronometer1=0x7f090018;
         public static final int createAccountTextView=0x7f09001b;
         public static final int createButton=0x7f090020;
+        public static final int createNewDreamDiary=0x7f09002c;
         public static final int doneButton=0x7f090011;
         public static final int dreamRecordEditText=0x7f090019;
         public static final int dreamRecordImageButton=0x7f090017;
@@ -112,6 +114,8 @@ public final class R {
         public static final int lucidRadio=0x7f090016;
         public static final int lucidityRadioGroup=0x7f090013;
         public static final int main_tab=0x7f09000c;
+        public static final int menu_add=0x7f09002e;
+        public static final int menu_search=0x7f09002f;
         public static final int normalRadio=0x7f090014;
         public static final int optionImageButton=0x7f090012;
         public static final int passwordEditText=0x7f090007;
@@ -149,6 +153,7 @@ public final class R {
         public static final int activity_test=0x7f030006;
         public static final int activity_welcome=0x7f030007;
         public static final int share=0x7f030008;
+        public static final int test=0x7f030009;
     }
     public static final class menu {
         public static final int index=0x7f080000;
@@ -172,6 +177,7 @@ public final class R {
          */
         public static final int create_account_text_view=0x7f070016;
         public static final int create_button=0x7f07001c;
+        public static final int create_new_dream_diary=0x7f07002b;
         /**  record 
          */
         public static final int done_button=0x7f07001d;
@@ -200,20 +206,25 @@ public final class R {
         public static final int test_record_activity_button=0x7f070005;
         public static final int test_register_activity_button=0x7f070006;
         public static final int test_share_activity_button=0x7f070007;
+        public static final int text_record=0x7f070029;
         public static final int title_activity_index=0x7f070026;
         public static final int title_activity_login=0x7f070022;
         public static final int title_activity_record=0x7f070024;
         public static final int title_activity_register=0x7f070025;
-        public static final int title_activity_share=0x7f07002a;
+        public static final int title_activity_share=0x7f07002e;
+        /**  Diary 
+         */
+        public static final int user_photo=0x7f07002a;
         public static final int username=0x7f07000d;
         public static final int username_edit_text=0x7f07000e;
         /**  login page 
          */
         public static final int username_text_view=0x7f07000c;
-        public static final int welcome_subtitle_text=0x7f070029;
+        public static final int voice_record=0x7f070028;
+        public static final int welcome_subtitle_text=0x7f07002d;
         /**  welcome 
          */
-        public static final int welcome_title_text=0x7f070028;
+        public static final int welcome_title_text=0x7f07002c;
     }
     public static final class style {
         /** 
