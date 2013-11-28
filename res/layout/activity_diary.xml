@@ -47,6 +47,19 @@
    	    android:layout_height="0.0dip"
    	    android:layout_weight="34.40" >
 
+   		<LinearLayout
+   		    android1:layout_width="match_parent"
+   		    android1:layout_height="match_parent"
+   		    android1:orientation="vertical" >
+
+   			<ListView
+   			    android1:id="@+id/listView1"
+   			    android1:layout_width="match_parent"
+   			    android1:layout_height="wrap_content" >
+   			</ListView>
+
+   		</LinearLayout>
+
 	</FrameLayout>
    	<TabWidget 
     		android:id="@android:id/tabs"
