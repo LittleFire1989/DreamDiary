@@ -68,8 +68,6 @@ this.testDreamRecordTextView = (TextView) this.findViewById(R.id.testDreamRecord
 			return false;
 		}
 
-		
-		
 	}
 
 }
