@@ -6,7 +6,6 @@
     <string name="action_search">Search</string>
     <string name="action_compose">Compose</string>
 
-
     <!-- test page -->
     <string name="test_login_activity_button">Test Login</string>
     <string name="test_record_activity_button">Test Record</string>
@@ -53,15 +52,16 @@
     <string name="title_activity_index">IndexActivity</string>
     <string name="test_dream_record">Test</string>
     <string name="voice_record">Voice</string>
-	<string name="text_record">Text</string>
-	
-	<!-- Diary -->
-	<string name="user_photo">Photo</string>
-	<string name="create_new_dream_diary">Create a New Dream Diary</string>
-	
+    <string name="text_record">Text</string>
+
+    <!-- Diary -->
+    <string name="user_photo">Photo</string>
+    <string name="create_new_dream_diary">Create a New Dream Diary</string>
+
     <!-- welcome -->
     <string name="welcome_title_text">Dream Diray</string>
     <string name="welcome_subtitle_text">Welcome to a new dream world</string>
     <string name="title_activity_share">ShareActivity</string>
+    <string name="title_activity_dreams">Dreams</string>
 
 </resources>
