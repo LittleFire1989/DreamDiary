@@ -37,6 +37,7 @@
 	   	        android:contentDescription="@string/add_photo"
 	   	        android:src="@drawable/add_photo" />
 
+	   	    
 	   	    <ImageView
 	   	        android:id="@+id/addLocationImageView"
 	   	        android:layout_width="29dp"
