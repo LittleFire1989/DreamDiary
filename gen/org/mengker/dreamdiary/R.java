@@ -146,7 +146,7 @@ public final class R {
         public static final int writeBtn=0x7f090025;
     }
     public static final class layout {
-        public static final int activity_diary=0x7f030000;
+        public static final int activity_dreams=0x7f030000;
         public static final int activity_index=0x7f030001;
         public static final int activity_login=0x7f030002;
         public static final int activity_main=0x7f030003;
@@ -158,12 +158,13 @@ public final class R {
         public static final int share=0x7f030009;
     }
     public static final class menu {
-        public static final int index=0x7f080000;
-        public static final int login=0x7f080001;
-        public static final int main=0x7f080002;
-        public static final int record=0x7f080003;
-        public static final int register=0x7f080004;
-        public static final int share=0x7f080005;
+        public static final int dreams=0x7f080000;
+        public static final int index=0x7f080001;
+        public static final int login=0x7f080002;
+        public static final int main=0x7f080003;
+        public static final int record=0x7f080004;
+        public static final int register=0x7f080005;
+        public static final int share=0x7f080006;
     }
     public static final class string {
         public static final int Half_lucid_radioButton=0x7f070020;
@@ -209,6 +210,7 @@ public final class R {
         public static final int test_register_activity_button=0x7f070006;
         public static final int test_share_activity_button=0x7f070007;
         public static final int text_record=0x7f070029;
+        public static final int title_activity_dreams=0x7f07002f;
         public static final int title_activity_index=0x7f070026;
         public static final int title_activity_login=0x7f070022;
         public static final int title_activity_record=0x7f070024;
