@@ -55,8 +55,8 @@
     <string name="save_dream">Save</string>
     <string name="voice_record">Voice Record</string>
     <string name="add_photo">Add Photo</string>
-    <string name="more_option">More Option</string>   
-    <string name="location_place">Location Place</string> 
+    <string name="more_option">More Option</string>
+    <string name="location_place">Location Place</string>
     <!-- Diary -->
 
     <string name="create_new_dream_diary">Create a New Dream Diary</string>
@@ -66,5 +66,6 @@
     <string name="welcome_subtitle_text">Welcome to a new dream world</string>
     <string name="title_activity_share">ShareActivity</string>
     <string name="title_activity_dreams">Dreams</string>
+    <string name="title_activity_dream_view">DreamView</string>
 
 </resources>
