@@ -54,5 +54,10 @@ public class IndexActivity extends Activity {
 	    Intent intent = new Intent(this, ShareActivity.class);
 	    startActivity(intent);
 	}
+	
+	public void startDreamsActivity(View view) {
+	    Intent intent = new Intent(this, DreamsActivity.class);
+	    startActivity(intent);
+	}
 
 }
