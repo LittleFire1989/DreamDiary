@@ -39,7 +39,7 @@
             android:label="@string/title_activity_share" >
         </activity>
         <activity
-            android:name="org.mengker.dreamdiary.Dreams"
+            android:name="org.mengker.dreamdiary.DreamsActivity"
             android:label="@string/title_activity_dreams" >
         </activity>
     </application>
