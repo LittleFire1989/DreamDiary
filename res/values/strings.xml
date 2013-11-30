@@ -50,6 +50,16 @@
     <string name="title_activity_record">RecordActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_index">IndexActivity</string>
+    <string name="test_dream_record">Test</string>
+    <string name="text_record">Text</string>
+    <string name="save_dream">Save</string>
+    <string name="voice_record">Voice Record</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="more_option">More Option</string>
+    <string name="location_place">Location Place</string>
+    <!-- Diary -->
+
+    <string name="create_new_dream_diary">Create a New Dream Diary</string>
 
     <!-- welcome -->
     <string name="welcome_title_text">Dream Diray</string>
@@ -57,9 +67,10 @@
     <string name="welcome_subtitle_text1">A lucid dream is any dream</string>
     <string name="welcome_subtitle_text2">in which one is aware that one is dreaming</string>
     <string name="title_activity_share">ShareActivity</string>
+
     
     
-    <!-- diarydream -->
-    <string name="diarydream_fillin_text"></string>
+    <string name="title_activity_dreams">Dreams</string>
+    <string name="title_activity_dream_view">DreamView</string>
 
 </resources>

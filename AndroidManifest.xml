@@ -38,7 +38,14 @@
             android:name="org.mengker.share.ShareActivity"
             android:label="@string/title_activity_share" >
         </activity>
-       
+        <activity
+            android:name="org.mengker.dreamdiary.DreamsActivity"
+            android:label="@string/title_activity_dreams" >
+        </activity>
+        <activity
+            android:name="org.mengker.dreamdiary.DreamView"
+            android:label="@string/title_activity_dream_view" >
+        </activity>
     </application>
 
 </manifest>
