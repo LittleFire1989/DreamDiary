@@ -10,6 +10,8 @@ package org.mengker.dreamdiary;
 public final class R {
     public static final class anim {
         public static final int loading=0x7f040000;
+        public static final int push_left_in=0x7f040001;
+        public static final int push_left_out=0x7f040002;
     }
     public static final class attr {
     }
@@ -81,65 +83,84 @@ public final class R {
         public static final int register_background8=0x7f02002d;
         public static final int register_background9=0x7f02002e;
         public static final int welcome_background1=0x7f02002f;
-        public static final int welcome_background2=0x7f020030;
-        public static final int welcome_background3=0x7f020031;
-        public static final int welcome_background4=0x7f020032;
-        public static final int welcome_background5=0x7f020033;
-        public static final int welcome_background6=0x7f020034;
+        public static final int welcome_background10=0x7f020030;
+        public static final int welcome_background11=0x7f020031;
+        public static final int welcome_background12=0x7f020032;
+        public static final int welcome_background13=0x7f020033;
+        public static final int welcome_background14=0x7f020034;
+        public static final int welcome_background15=0x7f020035;
+        public static final int welcome_background16=0x7f020036;
+        public static final int welcome_background17=0x7f020037;
+        public static final int welcome_background18=0x7f020038;
+        public static final int welcome_background19=0x7f020039;
+        public static final int welcome_background2=0x7f02003a;
+        public static final int welcome_background20=0x7f02003b;
+        public static final int welcome_background3=0x7f02003c;
+        public static final int welcome_background4=0x7f02003d;
+        public static final int welcome_background5=0x7f02003e;
+        public static final int welcome_background6=0x7f02003f;
+        public static final int welcome_background7=0x7f020040;
+        public static final int welcome_background8=0x7f020041;
+        public static final int welcome_background9=0x7f020042;
     }
     public static final class id {
-        public static final int Msglist=0x7f090020;
-        public static final int action_settings=0x7f090028;
-        public static final int addEmailEditText=0x7f090019;
-        public static final int addPasswordEditText=0x7f09001a;
-        public static final int addUsernameEditText=0x7f090018;
-        public static final int createAccountTextView=0x7f090017;
-        public static final int createButton=0x7f09001c;
-        public static final int doneButton=0x7f090011;
-        public static final int facebookLoginButton=0x7f090009;
-        public static final int halfLucidRadio=0x7f090015;
-        public static final int loading=0x7f090023;
-        public static final int loadingLayout=0x7f090022;
-        public static final int loginButton=0x7f090008;
-        public static final int lucidRadio=0x7f090016;
-        public static final int main_tab=0x7f09000c;
-        public static final int moreOptionButton=0x7f090012;
-        public static final int normalRadio=0x7f090014;
-        public static final int passwordEditText=0x7f090007;
-        public static final int paswordTextView=0x7f090006;
-        public static final int radio_button0=0x7f09000d;
-        public static final int radio_button1=0x7f09000e;
-        public static final int radio_button2=0x7f09000f;
-        public static final int radio_button3=0x7f090010;
-        public static final int rePasswordEditText=0x7f09001b;
-        public static final int refreshBtn=0x7f09001f;
-        public static final int registerButton=0x7f09000a;
-        public static final int selectRadioGroup=0x7f090013;
-        public static final int showName=0x7f09001d;
-        public static final int skipButton=0x7f09000b;
-        public static final int stext=0x7f090027;
-        public static final int suser=0x7f090026;
-        public static final int testLoginActivityButton=0x7f090000;
-        public static final int testRecordActivityButton=0x7f090002;
-        public static final int testRegisterActivityButton=0x7f090001;
-        public static final int testShareActivityButton=0x7f090003;
-        public static final int toolbarLayout=0x7f090021;
-        public static final int usernameEditText=0x7f090005;
-        public static final int usernameTextView=0x7f090004;
-        public static final int welcome_subtitle_main=0x7f090025;
-        public static final int welcome_text_main=0x7f090024;
-        public static final int writeBtn=0x7f09001e;
+        public static final int Msglist=0x7f090021;
+        public static final int action_settings=0x7f09002c;
+        public static final int addEmailEditText=0x7f09001a;
+        public static final int addPasswordEditText=0x7f09001b;
+        public static final int addUsernameEditText=0x7f090019;
+        public static final int createAccountTextView=0x7f090018;
+        public static final int createButton=0x7f09001d;
+        public static final int diarydream_fillin_text=0x7f090000;
+        public static final int doneButton=0x7f090012;
+        public static final int facebookLoginButton=0x7f09000f;
+        public static final int halfLucidRadio=0x7f090016;
+        public static final int loading=0x7f090024;
+        public static final int loadingLayout=0x7f090023;
+        public static final int loginButton=0x7f09000e;
+        public static final int lucidRadio=0x7f090017;
+        public static final int main_tab=0x7f090001;
+        public static final int moreOptionButton=0x7f090013;
+        public static final int normalRadio=0x7f090015;
+        public static final int passwordEditText=0x7f09000d;
+        public static final int paswordTextView=0x7f09000c;
+        public static final int radio_button0=0x7f090002;
+        public static final int radio_button1=0x7f090003;
+        public static final int radio_button2=0x7f090004;
+        public static final int radio_button3=0x7f090005;
+        public static final int rePasswordEditText=0x7f09001c;
+        public static final int refreshBtn=0x7f090020;
+        public static final int registerButton=0x7f090010;
+        public static final int selectRadioGroup=0x7f090014;
+        public static final int showName=0x7f09001e;
+        public static final int skipButton=0x7f090011;
+        public static final int stext=0x7f09002b;
+        public static final int suser=0x7f09002a;
+        public static final int testLoginActivityButton=0x7f090006;
+        public static final int testRecordActivityButton=0x7f090008;
+        public static final int testRegisterActivityButton=0x7f090007;
+        public static final int testShareActivityButton=0x7f090009;
+        public static final int toolbarLayout=0x7f090022;
+        public static final int usernameEditText=0x7f09000b;
+        public static final int usernameTextView=0x7f09000a;
+        public static final int welcome2_subtitle1=0x7f090028;
+        public static final int welcome2_subtitle2=0x7f090029;
+        public static final int welcome_flipper=0x7f090025;
+        public static final int welcome_subtitle_main=0x7f090027;
+        public static final int welcome_text_main=0x7f090026;
+        public static final int writeBtn=0x7f09001f;
     }
     public static final class layout {
-        public static final int activity_index=0x7f030000;
-        public static final int activity_login=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_record=0x7f030003;
-        public static final int activity_register=0x7f030004;
-        public static final int activity_share=0x7f030005;
-        public static final int activity_test=0x7f030006;
+        public static final int activity_diarydream=0x7f030000;
+        public static final int activity_index=0x7f030001;
+        public static final int activity_login=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_record=0x7f030004;
+        public static final int activity_register=0x7f030005;
+        public static final int activity_share=0x7f030006;
         public static final int activity_welcome=0x7f030007;
-        public static final int share=0x7f030008;
+        public static final int activity_welcome_2=0x7f030008;
+        public static final int share=0x7f030009;
     }
     public static final class menu {
         public static final int index=0x7f080000;
@@ -163,6 +184,9 @@ public final class R {
          */
         public static final int create_account_text_view=0x7f070016;
         public static final int create_button=0x7f07001c;
+        /**  diarydream 
+         */
+        public static final int diarydream_fillin_text=0x7f07002c;
         /**  record 
          */
         public static final int done_button=0x7f07001d;
@@ -194,13 +218,15 @@ public final class R {
         public static final int title_activity_login=0x7f070022;
         public static final int title_activity_record=0x7f070024;
         public static final int title_activity_register=0x7f070025;
-        public static final int title_activity_share=0x7f070029;
+        public static final int title_activity_share=0x7f07002b;
         public static final int username=0x7f07000d;
         public static final int username_edit_text=0x7f07000e;
         /**  login page 
          */
         public static final int username_text_view=0x7f07000c;
         public static final int welcome_subtitle_text=0x7f070028;
+        public static final int welcome_subtitle_text1=0x7f070029;
+        public static final int welcome_subtitle_text2=0x7f07002a;
         /**  welcome 
          */
         public static final int welcome_title_text=0x7f070027;
