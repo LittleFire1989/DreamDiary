@@ -13,7 +13,7 @@
     		android:visibility="gone"/>
 
     	<RadioGroup
-    	    android:id="@+id/main_tab"
+    	    android:id="@+id/dreamRecordTab"
     	    android:layout_width="fill_parent"
     	    android:layout_height="wrap_content"
     	    android:layout_gravity="bottom"
@@ -24,8 +24,7 @@
      		<ImageView
      		    android:layout_width="wrap_content"
      		    android:layout_height="wrap_content"
-     		    android:src="@drawable/amsu_menu_user"
-     		    android:contentDescription="@string/user_photo" >
+     		    android:src="@drawable/amsu_menu_user" >
 	        </ImageView>
     		
     	</RadioGroup>

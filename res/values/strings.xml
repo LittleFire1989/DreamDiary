@@ -51,11 +51,13 @@
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_index">IndexActivity</string>
     <string name="test_dream_record">Test</string>
-    <string name="voice_record">Voice</string>
     <string name="text_record">Text</string>
-
+    <string name="save_dream">Save</string>
+    <string name="voice_record">Voice Record</string>
+    <string name="add_photo">Add Photo</string>
+     <string name="more_option">More Option</string>   
     <!-- Diary -->
-    <string name="user_photo">Photo</string>
+
     <string name="create_new_dream_diary">Create a New Dream Diary</string>
 
     <!-- welcome -->

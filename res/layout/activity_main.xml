@@ -16,7 +16,7 @@
     		android:layout_weight="0.0"
     		android:visibility="gone"/>
     	<RadioGroup
-    		android:id="@+id/main_tab"
+    		android:id="@+id/dreamRecordTab"
     		android:background="@drawable/amsu_menu_toolbar_bg"
     		android:orientation="horizontal"
     		android:layout_width="fill_parent"
