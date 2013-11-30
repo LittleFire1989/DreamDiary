@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+<ViewFlipper
+	        android:id="@+id/welcome_flipper"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:persistentDrawingCache="animation"
+	        android:flipInterval="1000"
+	        android:inAnimation="@anim/push_left_in" 
+	        android:outAnimation="@anim/push_left_out">  
 
-<LinearLayout
+	<LinearLayout
         	android:layout_width="match_parent"
         	android:layout_height="match_parent"
         	android:background="@drawable/welcome_background4"
-        	android:orientation="vertical" >
-        	
+        	android:orientation="vertical" >     	
 	     <LinearLayout
             android:layout_width="match_parent" 
             android:layout_height="wrap_content"
@@ -17,37 +23,70 @@
             android:layout_marginRight="10.0px"
             android:layout_marginTop="20.0px"
             android:orientation="vertical" >
-
         	<TextView
             	android:id="@+id/welcome_text_main"
             	android:layout_width="254dp"
             	android:layout_height="46dp"
             	android:text="@string/welcome_title_text"
             	android:textSize="40sp" 
-            	android:textStyle="bold"/>       	       
-        	
-
-		</LinearLayout>
-			
+            	android:textStyle="bold"/>       	               	
+		</LinearLayout>			
 	    <LinearLayout
             android:layout_width="match_parent" 
             android:layout_height="wrap_content"
             android:layout_marginLeft="100.0px"
             android:layout_marginRight="10.0px"
             android:layout_marginTop="20.0px"
-            android:orientation="vertical" >
-        	
+            android:orientation="vertical" >        	
 	     	<TextView
 	     	    android:id="@+id/welcome_subtitle_main"
 	     	    android:layout_width="wrap_content"
 	     	    android:layout_height="wrap_content"
 	     	    android:text="@string/welcome_subtitle_text"
-	     	    android:textStyle="bold" />
-	     	
+	     	    android:textStyle="bold" />	     	
 		</LinearLayout>
-		
-
 	</LinearLayout>
+ 	<LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:background="@drawable/welcome_background7"
+        	android:orientation="vertical" >     	
+	     <LinearLayout
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0px"
+            android:layout_marginRight="50.0px"
+            android:layout_marginTop="50.0px"
+            android:orientation="vertical" >
+        	<TextView
+            	android:id="@+id/welcome2_subtitle1"
+            	android:layout_width="254dp"
+            	android:layout_height="46dp"
+            	android:text="@string/welcome_subtitle_text1"
+            	android:textSize="20sp"
+            	android:textColor="#F8F8FF" 
+            	android:textStyle="bold"/>       	               	
+		</LinearLayout>			
+	    <LinearLayout
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0px"
+            android:layout_marginRight="20.0px"
+            android:layout_marginTop="0.0px"
+            android:orientation="vertical" >        	
+	     	<TextView
+	     	    android:id="@+id/welcome2_subtitle2"
+	     	    android:layout_width="wrap_content"
+	     	    android:layout_height="wrap_content"
+	     	    android:text="@string/welcome_subtitle_text2"
+	     	    android:textSize="15sp"
+	     	    android:textColor="#F8F8FF"
+	     	    android:textStyle="bold" />	     	
+		</LinearLayout>
+	</LinearLayout>
+	
+</ViewFlipper>
+	
 </LinearLayout>
 
      
