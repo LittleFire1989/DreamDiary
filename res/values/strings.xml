@@ -60,7 +60,11 @@
     <!-- Diary -->
 
     <string name="create_new_dream_diary">Create a New Dream Diary</string>
-
+    
+    <!-- Dream View -->
+    <string name="dream_edit">Edit the dream</string>
+    <string name="dream_remove">Remove the dream</string>
+    <string name="dream_share">Share the dream</string>
     <!-- welcome -->
     <string name="welcome_title_text">Dream Diray</string>
     <string name="welcome_subtitle_text">Welcome to a new dream world</string>
