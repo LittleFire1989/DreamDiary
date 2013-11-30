@@ -16,8 +16,8 @@ public class ORMDcon {
 	            
 	        }
 	            String url = "jdbc:mysql://mengkerorg.ipagemysql.com/mengker";
-	            String user = "mengkerkid";
-	            String password = "QMM_2013";     
+	            String user = "mengkerkid"; //remote
+	            String password = "QMM_2013";     //remote_2013
 	             
 	            conn = DriverManager.getConnection(url, user, password);
 	            System.out.println("DB connects successfully.");
