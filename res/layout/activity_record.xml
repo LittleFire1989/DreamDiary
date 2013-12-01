@@ -22,10 +22,9 @@
 
 	   	    <ImageView
 	   	        android:id="@+id/voiceRecordImageView"
-	   	        android:layout_width="23dp"
-	   	        android:layout_height="match_parent"
+	   	        android:layout_width="wrap_content"
+	   	        android:layout_height="wrap_content"
 	   	        android:layout_marginLeft="150dip"
-	   	        android:layout_weight="0.04"
 	   	        android:contentDescription="@string/voice_record"
 	   	        android:src="@drawable/voice_record" />
 

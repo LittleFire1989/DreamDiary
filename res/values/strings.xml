@@ -60,16 +60,27 @@
     <!-- Diary -->
 
     <string name="create_new_dream_diary">Create a New Dream Diary</string>
-    
-    <!-- Dream View -->
+
+    <!-- Dream Edit -->
     <string name="dream_edit">Edit the dream</string>
     <string name="dream_remove">Remove the dream</string>
     <string name="dream_share">Share the dream</string>
+    
+    <!-- Dream View -->
+    <string name="dream_title">Dream Title</string> 
+   	<string name="dream_create_time">Create Time</string>
+   	
+   	<!-- Dream Share -->		  
+    <string name="dream_user_name">Dream User Name</string> 
+    <string name="dream_user_detail">Dream Detail</string> 
+    <string name="dream_user_post_date">post date</string>     
+    
     <!-- welcome -->
     <string name="welcome_title_text">Dream Diray</string>
     <string name="welcome_subtitle_text">Welcome to a new dream world</string>
     <string name="title_activity_share">ShareActivity</string>
     <string name="title_activity_dreams">Dreams</string>
     <string name="title_activity_dream_view">DreamView</string>
+    <string name="title_activity_dream_edit">DreamEdit</string>
 
 </resources>

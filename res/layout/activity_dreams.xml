@@ -55,7 +55,10 @@
    			<ListView
    			    android1:id="@+id/listView1"
    			    android1:layout_width="match_parent"
-   			    android1:layout_height="wrap_content" >
+   			    android1:layout_height="wrap_content" 
+   			    android:divider="#DCDCDC" 
+   			    android:dividerHeight="3px"
+ 			    android:fastScrollEnabled="true">
    			</ListView>
 
    		</LinearLayout>
