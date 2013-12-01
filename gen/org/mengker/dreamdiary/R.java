@@ -120,22 +120,23 @@ public final class R {
         public static final int welcome_background9=0x7f020052;
     }
     public static final class id {
-        public static final int Msglist=0x7f090027;
-        public static final int actionVoice=0x7f090036;
-        public static final int action_settings=0x7f090033;
-        public static final int addEmailEditText=0x7f090023;
+        public static final int Msglist=0x7f090028;
+        public static final int actionVoice=0x7f090037;
+        public static final int action_settings=0x7f090034;
+        public static final int addEmailEditText=0x7f090024;
         public static final int addLocationImageView=0x7f09001f;
-        public static final int addPasswordEditText=0x7f090024;
+        public static final int addPasswordEditText=0x7f090025;
         public static final int addPhotoImageView=0x7f09001e;
-        public static final int addUsernameEditText=0x7f090022;
-        public static final int createAccountTextView=0x7f090021;
-        public static final int createButton=0x7f090026;
+        public static final int addUsernameEditText=0x7f090023;
+        public static final int createAccountTextView=0x7f090022;
+        public static final int createButton=0x7f090027;
         public static final int createNewDreamDiary=0x7f090001;
-        public static final int dateTextView=0x7f090032;
+        public static final int dateTextView=0x7f090033;
         public static final int diaryToolBar=0x7f090003;
-        public static final int dreamCreateTimeTextView=0x7f09002e;
-        public static final int dreamDetailstextView=0x7f090031;
+        public static final int dreamCreateTimeTextView=0x7f09002f;
+        public static final int dreamDetailstextView=0x7f090032;
         public static final int dreamRecordEditText=0x7f090020;
+        public static final int dreamRecordNavTab=0x7f090021;
         public static final int dreamRecordTab=0x7f090000;
         public static final int dreamRemoveImageView=0x7f090009;
         public static final int dreamShareImageView=0x7f09000a;
@@ -143,12 +144,12 @@ public final class R {
         public static final int editDreamImageView=0x7f090008;
         public static final int facebookLoginButton=0x7f090018;
         public static final int imageButton1=0x7f09000d;
-        public static final int itemTextView=0x7f09002d;
+        public static final int itemTextView=0x7f09002e;
         public static final int listView1=0x7f090002;
         public static final int loginButton=0x7f090017;
         public static final int main_tab=0x7f09001b;
-        public static final int menu_add=0x7f090034;
-        public static final int menu_search=0x7f090035;
+        public static final int menu_add=0x7f090035;
+        public static final int menu_search=0x7f090036;
         public static final int moreOptionImageView=0x7f09000b;
         public static final int passwordEditText=0x7f090016;
         public static final int paswordTextView=0x7f090015;
@@ -156,7 +157,7 @@ public final class R {
         public static final int radio_button1=0x7f090004;
         public static final int radio_button2=0x7f090005;
         public static final int radio_button3=0x7f090006;
-        public static final int rePasswordEditText=0x7f090025;
+        public static final int rePasswordEditText=0x7f090026;
         public static final int registerButton=0x7f090019;
         public static final int saveImageView=0x7f090007;
         public static final int skipButton=0x7f09001a;
@@ -165,16 +166,16 @@ public final class R {
         public static final int testRecordActivityButton=0x7f090011;
         public static final int testRegisterActivityButton=0x7f090010;
         public static final int testShareActivityButton=0x7f09000e;
-        public static final int userNameTextView=0x7f090030;
-        public static final int userPhotoImageView=0x7f09002f;
+        public static final int userNameTextView=0x7f090031;
+        public static final int userPhotoImageView=0x7f090030;
         public static final int usernameEditText=0x7f090014;
         public static final int usernameTextView=0x7f090013;
         public static final int voiceRecordImageView=0x7f09001d;
-        public static final int welcome2_subtitle1=0x7f09002b;
-        public static final int welcome2_subtitle2=0x7f09002c;
-        public static final int welcome_flipper=0x7f090028;
-        public static final int welcome_subtitle_main=0x7f09002a;
-        public static final int welcome_text_main=0x7f090029;
+        public static final int welcome2_subtitle1=0x7f09002c;
+        public static final int welcome2_subtitle2=0x7f09002d;
+        public static final int welcome_flipper=0x7f090029;
+        public static final int welcome_subtitle_main=0x7f09002b;
+        public static final int welcome_text_main=0x7f09002a;
     }
     public static final class layout {
         public static final int activity_diary_book=0x7f030000;
@@ -182,13 +183,14 @@ public final class R {
         public static final int activity_index=0x7f030002;
         public static final int activity_login=0x7f030003;
         public static final int activity_main=0x7f030004;
-        public static final int activity_record=0x7f030005;
-        public static final int activity_register=0x7f030006;
-        public static final int activity_share=0x7f030007;
-        public static final int activity_test=0x7f030008;
-        public static final int activity_welcome=0x7f030009;
-        public static final int dream_view=0x7f03000a;
-        public static final int share=0x7f03000b;
+        public static final int activity_new_dream=0x7f030005;
+        public static final int activity_record=0x7f030006;
+        public static final int activity_register=0x7f030007;
+        public static final int activity_share=0x7f030008;
+        public static final int activity_test=0x7f030009;
+        public static final int activity_welcome=0x7f03000a;
+        public static final int dream_view=0x7f03000b;
+        public static final int share=0x7f03000c;
     }
     public static final class menu {
         public static final int dream_edit=0x7f080000;
@@ -197,9 +199,10 @@ public final class R {
         public static final int index=0x7f080003;
         public static final int login=0x7f080004;
         public static final int main=0x7f080005;
-        public static final int record=0x7f080006;
-        public static final int register=0x7f080007;
-        public static final int share=0x7f080008;
+        public static final int new_dream=0x7f080006;
+        public static final int record=0x7f080007;
+        public static final int register=0x7f080008;
+        public static final int share=0x7f080009;
     }
     public static final class string {
         public static final int Half_lucid_radioButton=0x7f070020;
@@ -270,6 +273,7 @@ public final class R {
         public static final int title_activity_dream_view=0x7f07003d;
         public static final int title_activity_index=0x7f070026;
         public static final int title_activity_login=0x7f070022;
+        public static final int title_activity_new_dream=0x7f07003f;
         public static final int title_activity_record=0x7f070024;
         public static final int title_activity_register=0x7f070025;
         public static final int title_activity_share=0x7f07003b;
