@@ -67,10 +67,8 @@
     <string name="welcome_subtitle_text1">A lucid dream is any dream</string>
     <string name="welcome_subtitle_text2">in which one is aware that one is dreaming</string>
     <string name="title_activity_share">ShareActivity</string>
-
-    
-    
     <string name="title_activity_dreams">Dreams</string>
     <string name="title_activity_dream_view">DreamView</string>
+    <string name="title_activity_me">Me</string>
 
 </resources>

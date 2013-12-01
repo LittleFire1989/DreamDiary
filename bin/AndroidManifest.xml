@@ -46,6 +46,10 @@
             android:name="org.mengker.dreamdiary.DreamView"
             android:label="@string/title_activity_dream_view" >
         </activity>
+        <activity
+            android:name="org.mengker.dreamdiary.Me"
+            android:label="@string/title_activity_me" >
+        </activity>
     </application>
 
 </manifest>
