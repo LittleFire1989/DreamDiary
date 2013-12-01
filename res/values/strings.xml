@@ -78,7 +78,12 @@
     <!-- welcome -->
     <string name="welcome_title_text">Dream Diray</string>
     <string name="welcome_subtitle_text">Welcome to a new dream world</string>
+    <string name="welcome_subtitle_text1">A lucid dream is any dream</string>
+    <string name="welcome_subtitle_text2">in which one is aware that one is dreaming</string>
     <string name="title_activity_share">ShareActivity</string>
+
+    
+    
     <string name="title_activity_dreams">Dreams</string>
     <string name="title_activity_dream_view">DreamView</string>
     <string name="title_activity_dream_edit">DreamEdit</string>
