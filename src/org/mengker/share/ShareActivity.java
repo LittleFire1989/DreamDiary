@@ -38,12 +38,12 @@ public class ShareActivity extends Activity {
 	}
 	
 	private void loadList() {
-		loadingLayout=(LinearLayout)findViewById(R.id.loadingLayout);
+		//loadingLayout=(LinearLayout)findViewById(R.id.loadingLayout);
 		
 		
 			// 显示当前用户名称
-			TextView showName = (TextView) findViewById(R.id.showName);
-			showName.setText("TestUserName");
+			//TextView showName = (TextView) findViewById(R.id.showName);
+			//showName.setText("TestUserName");
 
 			
 			
@@ -112,9 +112,9 @@ public class ShareActivity extends Activity {
 
 			
 			//ImageView tempIV = (ImageView) convertView.findViewById(R.id.wbicon);
-			TextView tempTV = (TextView) convertView.findViewById(R.id.stext);
+			TextView tempTV = (TextView) convertView.findViewById(R.id.dreamDetailstextView);
 			//wh.wbtime = (TextView) convertView.findViewById(R.id.wbtime);
-			TextView tempUser = (TextView) convertView.findViewById(R.id.suser);
+			TextView tempUser = (TextView) convertView.findViewById(R.id.userNameTextView);
 			//wh.wbimage = (ImageView) convertView.findViewById(R.id.wbimage);
 			Share wb = wbList.get(position);
 			if (wb != null) {
