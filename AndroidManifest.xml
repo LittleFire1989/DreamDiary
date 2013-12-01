@@ -50,6 +50,10 @@
             android:name="org.mengker.dreamdiary.Me"
             android:label="@string/title_activity_me" >
         </activity>
+        <activity
+            android:name="org.mengker.dreamdiary.WelcomeMain"
+            android:label="@string/title_activity_welcome_main" >
+        </activity>
     </application>
 
 </manifest>

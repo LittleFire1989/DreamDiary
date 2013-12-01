@@ -187,8 +187,9 @@ public final class R {
         public static final int activity_test=0x7f030009;
         public static final int activity_welcome=0x7f03000a;
         public static final int activity_welcome_2=0x7f03000b;
-        public static final int me_item=0x7f03000c;
-        public static final int share=0x7f03000d;
+        public static final int activity_welcome_main=0x7f03000c;
+        public static final int me_item=0x7f03000d;
+        public static final int share=0x7f03000e;
     }
     public static final class menu {
         public static final int dream_view=0x7f080000;
@@ -200,6 +201,7 @@ public final class R {
         public static final int record=0x7f080006;
         public static final int register=0x7f080007;
         public static final int share=0x7f080008;
+        public static final int welcome_main=0x7f080009;
     }
     public static final class string {
         public static final int Half_lucid_radioButton=0x7f070020;
@@ -259,6 +261,7 @@ public final class R {
         public static final int title_activity_record=0x7f070024;
         public static final int title_activity_register=0x7f070025;
         public static final int title_activity_share=0x7f070033;
+        public static final int title_activity_welcome_main=0x7f070037;
         public static final int username=0x7f07000d;
         public static final int username_edit_text=0x7f07000e;
         /**  login page 

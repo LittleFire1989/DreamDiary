@@ -70,5 +70,6 @@
     <string name="title_activity_dreams">Dreams</string>
     <string name="title_activity_dream_view">DreamView</string>
     <string name="title_activity_me">Me</string>
+    <string name="title_activity_welcome_main">WelcomeMain</string>
 
 </resources>
