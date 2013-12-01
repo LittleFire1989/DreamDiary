@@ -21,7 +21,8 @@
         android:layout_alignTop="@+id/userPhotoImageView"
         android:layout_centerHorizontal="true"
         android:text="@string/dream_user_name"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/dreamDetailstextView"
@@ -31,6 +32,7 @@
         android:layout_below="@+id/userPhotoImageView"
         android:layout_marginTop="24dp"
         android:text="@string/dream_user_detail"
+        android:textColor="#000000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -41,6 +43,7 @@
         android:layout_below="@+id/dreamDetailstextView"
         android:layout_marginTop="15dp"
         android:text="@string/dream_user_post_date"
+        android:textColor="#000000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
