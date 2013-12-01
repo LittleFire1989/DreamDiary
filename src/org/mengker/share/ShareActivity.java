@@ -79,7 +79,7 @@ public class ShareActivity extends Activity {
 			
 			}
 				
-		 loadingLayout.setVisibility(View.GONE);
+		 //loadingLayout.setVisibility(View.GONE);
 	}
 	public class ShareAdapter extends BaseAdapter {
 		
