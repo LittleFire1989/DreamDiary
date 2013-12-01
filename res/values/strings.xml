@@ -84,7 +84,7 @@
 
     
     
-    <string name="title_activity_dreams">Dreams</string>
+    <string name="title_activity_diary_book">Diary Book</string>
     <string name="title_activity_dream_view">DreamView</string>
     <string name="title_activity_dream_edit">DreamEdit</string>
 
