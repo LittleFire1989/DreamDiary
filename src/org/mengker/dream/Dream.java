@@ -7,7 +7,7 @@ import java.util.Date;
 /* To be modified:
  * publish()
  * editDream()
- * inner class: Note, Recording
+ * inner class:  Note, Recording
  *  
  */
 

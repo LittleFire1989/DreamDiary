@@ -39,10 +39,6 @@
             android:label="@string/title_activity_share" >
         </activity>
         <activity
-            android:name="org.mengker.dreamdiary.DreamsActivity"
-            android:label="@string/title_activity_dreams" >
-        </activity>
-        <activity
             android:name="org.mengker.dreamdiary.DreamView"
             android:label="@string/title_activity_dream_view" >
         </activity>
@@ -53,6 +49,10 @@
         <activity
             android:name="org.mengker.dreamdiary.WelcomeMain"
             android:label="@string/title_activity_welcome_main" >
+        </activity>
+        <activity
+            android:name="org.mengker.dreamdiary.ExploreActivity"
+            android:label="@string/title_activity_share" >
         </activity>
     </application>
 

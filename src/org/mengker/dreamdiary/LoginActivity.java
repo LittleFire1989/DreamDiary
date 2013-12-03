@@ -18,13 +18,13 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.activity_login);
 		final EditText mEditText1 = (EditText) findViewById(R.id.usernameEditText);
 		final EditText mEditText2 = (EditText) findViewById(R.id.passwordEditText);
-		final Button mButton1 = (Button) findViewById(R.id.loginButton);
+		final Button loginButton = (Button) findViewById(R.id.loginButton);
 		final Button mButton2 = (Button) findViewById(R.id.facebookLoginButton);
 		final Button mButton3 = (Button) findViewById(R.id.registerButton);
 		mEditText1.setHint("Username");
 		mEditText2.setHint("Password");
-		// ~~~~~~~~~~~~~~登录~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		mButton1.setOnClickListener(new OnClickListener() {
+		// ~~~~~~~~~~~~~~鐧诲綍~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		loginButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -32,16 +32,17 @@ public class LoginActivity extends Activity {
 				String q = mEditText1.getText().toString();
 				String pass = mEditText2.getText().toString();
 				Intent intent2 = new Intent();
-				Intent intent3 = new Intent();
+				Intent startDiaryBookActivity = new Intent();
 				intent2.setClass(LoginActivity.this, RegisterActivity.class);
-				intent3.setClass(LoginActivity.this, RecordActivity.class);
-				RegisterActivity qq = new RegisterActivity();
+				startDiaryBookActivity.setClass(LoginActivity.this, DiaryBookActivity.class);
+				startActivity(startDiaryBookActivity);
+/*				RegisterActivity qq = new RegisterActivity();
 				qq.QDatabase = openOrCreateDatabase(qq.DATABASE_NAME,
-						MODE_PRIVATE, null);// 打开数据库
-				// ~~~~~~~~~~~~~~~~~~用Cursor类来接收查询到的数据~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+						MODE_PRIVATE, null);// 鎵撳紑鏁版嵁搴�
+				// ~~~~~~~~~~~~~~~~~~鐢–ursor绫绘潵鎺ユ敹鏌ヨ鍒扮殑鏁版嵁~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 				Cursor cursor = qq.QDatabase.query(qq.TABLE_NAME, new String[] {
 						qq.QQ, qq.PASS }, null, null, null, null, null);
-				// ~~~~~~~~~~~~~~~~~用do..while循环验证文本框输入的内容是否和数据库的吻合，是就将flag改为true~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+				// ~~~~~~~~~~~~~~~~~鐢╠o..while寰幆楠岃瘉鏂囨湰妗嗚緭鍏ョ殑鍐呭鏄惁鍜屾暟鎹簱鐨勫惢鍚堬紝鏄氨灏唂lag鏀逛负true~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 				if (cursor != null) {
 					if (cursor.moveToFirst()) {
 						do {
@@ -52,16 +53,19 @@ public class LoginActivity extends Activity {
 						} while (cursor.moveToNext());
 					}
 				}
-				// ~~~~~~~~~~~~~~~~~~~验证~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+				// ~~~~~~~~~~~~~~~~~~~楠岃瘉~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 				if (flag) {
 					startActivity(intent2);
 				} else {
 					startActivity(intent3);
 				}
-				qq.QDatabase.close();// 关闭
+				qq.QDatabase.close();// 鍏抽棴
+*/
+				
 			}
+			
 		});
-		// ~~~~~~~~~~~~~~~重置~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// ~~~~~~~~~~~~~~~閲嶇疆~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		mButton2.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
@@ -70,7 +74,7 @@ public class LoginActivity extends Activity {
 				mEditText2.setText("");
 			}
 		});
-		// ~~~~~~~~~~~~~~注册QQ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// ~~~~~~~~~~~~~~娉ㄥ唽QQ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		mButton3.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
