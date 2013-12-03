@@ -46,7 +46,7 @@ public class IndexActivity extends Activity {
 	}
 	
 	public void startRecordActivity(View view) {
-	    Intent intent = new Intent(this, RecordActivity.class);
+	    Intent intent = new Intent(this, NewDreamActivity.class);
 	    startActivity(intent);
 	}
 	

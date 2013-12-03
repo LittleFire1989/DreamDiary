@@ -19,7 +19,7 @@ public class DiaryBookActivity extends Activity {
 		createNewDreamDiary = (Button) this.findViewById(R.id.createNewDreamDiary);
 		createNewDreamDiary.setOnClickListener(new OnClickListener(){
 			public void onClick(View arg0) {
-				Intent intent = new Intent(DiaryBookActivity.this, RecordActivity.class);
+				Intent intent = new Intent(DiaryBookActivity.this, NewDreamActivity.class);
 			    startActivity(intent);
 			    finish();
 			}
