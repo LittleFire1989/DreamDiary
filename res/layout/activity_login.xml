@@ -34,7 +34,7 @@
                        
                 <EditText
                     android:id="@+id/usernameEditText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/username"
                     android:inputType="text|textEmailAddress"
@@ -59,7 +59,7 @@
 
 	 			<EditText
 					android:id="@+id/passwordEditText"
-					android:layout_width="wrap_content"
+					android:layout_width="fill_parent"
 				    android:layout_height="wrap_content"
 					android:hint="@string/password"
 					android:inputType="textPassword"
