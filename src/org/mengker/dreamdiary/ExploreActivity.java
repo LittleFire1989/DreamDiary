@@ -1,4 +1,4 @@
-package org.mengker.share;
+package org.mengker.dreamdiary;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,11 @@ import java.util.List;
 import org.mengker.dreamdiary.R;
 import org.mengker.dreamdiary.R.layout;
 import org.mengker.dreamdiary.R.menu;
+import org.mengker.share.Share;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -18,14 +20,14 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ShareActivity extends Activity {
+public class ExploreActivity extends Activity {
 	private List<Share> wbList;
 	private LinearLayout loadingLayout=null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_share);
+		setContentView(R.layout.activity_explore);
 		
 		loadList();
 	}
@@ -133,6 +135,23 @@ public class ShareActivity extends Activity {
 		}
 
 	}
+	
+	//navigate
+	
+	public void startDiaryBookActivity(View view) {
+	    Intent intent = new Intent(this, DiaryBookActivity.class);
+	    startActivity(intent);
+	}
+	
+	public void startExploreActivity(View view) {
+	    Intent intent = new Intent(this, ExploreActivity.class);
+	    startActivity(intent);
+	}
+	
+//	public void startMeActivity(View view) {
+//	    Intent intent = new Intent(this, MeActivity.class);
+//	    startActivity(intent);
+//	}
 
 }
 

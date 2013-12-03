@@ -18,13 +18,13 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.activity_login);
 		final EditText mEditText1 = (EditText) findViewById(R.id.usernameEditText);
 		final EditText mEditText2 = (EditText) findViewById(R.id.passwordEditText);
-		final Button mButton1 = (Button) findViewById(R.id.loginButton);
+		final Button loginButton = (Button) findViewById(R.id.loginButton);
 		final Button mButton2 = (Button) findViewById(R.id.facebookLoginButton);
 		final Button mButton3 = (Button) findViewById(R.id.registerButton);
 		mEditText1.setHint("Username");
 		mEditText2.setHint("Password");
 		// ~~~~~~~~~~~~~~鐧诲綍~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		mButton1.setOnClickListener(new OnClickListener() {
+		loginButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -32,10 +32,11 @@ public class LoginActivity extends Activity {
 				String q = mEditText1.getText().toString();
 				String pass = mEditText2.getText().toString();
 				Intent intent2 = new Intent();
-				Intent intent3 = new Intent();
+				Intent startDiaryBookActivity = new Intent();
 				intent2.setClass(LoginActivity.this, RegisterActivity.class);
-				intent3.setClass(LoginActivity.this, NewDreamActivity.class);
-				RegisterActivity qq = new RegisterActivity();
+				startDiaryBookActivity.setClass(LoginActivity.this, DiaryBookActivity.class);
+				startActivity(startDiaryBookActivity);
+/*				RegisterActivity qq = new RegisterActivity();
 				qq.QDatabase = openOrCreateDatabase(qq.DATABASE_NAME,
 						MODE_PRIVATE, null);// 鎵撳紑鏁版嵁搴�
 				// ~~~~~~~~~~~~~~~~~~鐢–ursor绫绘潵鎺ユ敹鏌ヨ鍒扮殑鏁版嵁~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -59,7 +60,10 @@ public class LoginActivity extends Activity {
 					startActivity(intent3);
 				}
 				qq.QDatabase.close();// 鍏抽棴
+*/
+				
 			}
+			
 		});
 		// ~~~~~~~~~~~~~~~閲嶇疆~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		mButton2.setOnClickListener(new OnClickListener() {

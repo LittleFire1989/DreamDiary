@@ -33,5 +33,21 @@ public class DiaryBookActivity extends Activity {
 		getMenuInflater().inflate(R.menu.dreams, menu);
 		return true;
 	}
+	
+	//navigate	
+	public void startDiaryBookActivity(View view) {
+	    Intent intent = new Intent(this, DiaryBookActivity.class);
+	    startActivity(intent);
+	}
+	
+	public void startExploreActivity(View view) {
+	    Intent intent = new Intent(this, ExploreActivity.class);
+	    startActivity(intent);
+	}
+	
+//	public void startMeActivity(View view) {
+//	    Intent intent = new Intent(this, MeActivity.class);
+//	    startActivity(intent);
+//	}
 
 }

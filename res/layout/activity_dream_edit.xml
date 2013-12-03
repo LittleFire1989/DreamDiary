@@ -90,33 +90,37 @@
         android:visibility="gone" />
 
     <RadioGroup
-        android:id="@+id/dreamRecordTab"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/amsu_menu_toolbar_bg"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
+   	    android:id="@+id/indexBar"
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="wrap_content"
+   	    android:layout_weight="0.0"
+   	    android:background="@drawable/amsu_menu_toolbar_bg"
+   	    android:gravity="center_vertical"
+   	    android:orientation="horizontal" >
 
-        <RadioButton
-            android:id="@+id/radio_button1"
-            style="@style/main_tab_bottom"
-            android:layout_marginTop="1.0dip"
-            android:drawableTop="@drawable/logo_ss"
-            android:text="@string/dream_diary" />
+   	    <RadioButton
+   	        android:id="@+id/diary_book_radio_button"
+   	        style="@style/main_tab_bottom"
+   	        android:layout_marginTop="1.0dip"
+   	        android:drawableTop="@drawable/logo_ss"
+   	        android:text="@string/dream_diary" 
+   	        android:onClick="startDiaryBookActivity"/>
 
-        <RadioButton
-            android:id="@+id/radio_button2"
-            style="@style/main_tab_bottom"
-            android:layout_marginTop="1.0dip"
-            android:drawableTop="@drawable/amsu_menu_search"
-            android:text="@string/dream_explore" />
+   	    <RadioButton
+   	        android:id="@+id/explore_radio_button"
+   	        style="@style/main_tab_bottom"
+   	        android:layout_marginTop="1.0dip"
+   	        android:drawableTop="@drawable/amsu_menu_search"
+   	        android:text="@string/dream_explore"
+   	        android:onClick="startExploreActivity" />
 
-        <RadioButton
-            android:id="@+id/radio_button3"
-            style="@style/main_tab_bottom"
-            android:layout_marginTop="1.0dip"
-            android:drawableTop="@drawable/amsu_menu_user"
-            android:text="@string/dream_about_me" />
-    </RadioGroup>
+   	    <RadioButton
+   	        android:id="@+id/me_radio_button"
+   	        style="@style/main_tab_bottom"
+   	        android:layout_marginTop="1.0dip"
+   	        android:drawableTop="@drawable/amsu_menu_user"
+   	        android:text="@string/dream_about_me" 
+   	        android:onClick="startMeActivity"/>
+   	</RadioGroup>
 
 </LinearLayout>

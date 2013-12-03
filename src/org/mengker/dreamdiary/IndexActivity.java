@@ -1,7 +1,5 @@
 package org.mengker.dreamdiary;
 
-import org.mengker.share.ShareActivity;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -51,7 +49,7 @@ public class IndexActivity extends Activity {
 	}
 	
 	public void startShareActivity(View view) {
-	    Intent intent = new Intent(this, ShareActivity.class);
+	    Intent intent = new Intent(this, ExploreActivity.class);
 	    startActivity(intent);
 	}
 	
