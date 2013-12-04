@@ -5,13 +5,13 @@
     android:orientation="vertical"   >
     
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:background="@drawable/register_background5"
         android:orientation="vertical" >
         
         <LinearLayout
-            android:layout_width="match_parent" 
+            android:layout_width="fill_parent" 
             android:layout_height="wrap_content"
             android:layout_marginLeft="30.0px"
             android:layout_marginRight="30.0px"
@@ -20,7 +20,7 @@
             
             <TextView
 		        android:id="@+id/createAccountTextView"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:textColor="#F8F8FF"
                 android:textSize="16sp"
@@ -28,7 +28,7 @@
 		    
 		    <EditText
 		        android:id="@+id/addUsernameEditText"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="10dp"
 		        android:ems="10"
@@ -39,7 +39,7 @@
 		    
 		    <EditText
 		        android:id="@+id/addEmailEditText"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="10dp"
 		        android:ems="10"
@@ -50,7 +50,7 @@
 		    
 		    <EditText
 		        android:id="@+id/addPasswordEditText"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="10dp"
 		        android:ems="10"
@@ -61,7 +61,7 @@
 
 		    <EditText
 		        android:id="@+id/rePasswordEditText"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="10dp"
 		        android:ems="10"
@@ -91,91 +91,3 @@
 		        android:textSize="14sp" />	 
 	</LinearLayout>
 </LinearLayout>
-
-
-
-
-
-
-
-
-
-<!--  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RegisterActivity" >
-
-    <TextView
-        android:id="@+id/createAccountTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="84dp"
-        android:text="@string/create_account_text_view" />
-
-    <EditText
-        android:id="@+id/addUsernameEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/createAccountTextView"
-        android:layout_below="@+id/createAccountTextView"
-        android:layout_marginTop="27dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="@string/add_username_edit_text" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/addEmailEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/addUsernameEditText"
-        android:layout_below="@+id/addUsernameEditText"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/add_email_edit_text" />
-
-    <EditText
-        android:id="@+id/addPasswordEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/addEmailEditText"
-        android:layout_below="@+id/addEmailEditText"
-        android:layout_marginTop="19dp"
-        android:ems="10"
-        android:inputType="text|textPassword"
-        android:text="@string/add_password_edit_text" />
-
-    <EditText
-        android:id="@+id/rePasswordEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/addPasswordEditText"
-        android:layout_below="@+id/addPasswordEditText"
-        android:layout_marginTop="17dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="@string/repassword_edit_text" />
-
-    <Button
-        android:id="@+id/createButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="21dp"
-        android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/createAccountTextView"
-        android:text="@string/create_button" />
-
-</RelativeLayout>
--->
