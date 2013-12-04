@@ -1,7 +1,33 @@
 package org.mengker.dreamdiary;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.NameValuePair;
+import org.apache.http.ParseException;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
+import org.mengker.net.Operation;
+
+
+
+
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.view.Menu;
@@ -9,72 +35,48 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends Activity {
-
+	private EditText etusername = null;
+	private EditText etpassword = null;
+	private Button loginButton;
+	private Button mButton2;
+	private Button mButton3 ;
+	private String username;
+	private String password;
+	ProgressDialog p;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-		final EditText mEditText1 = (EditText) findViewById(R.id.usernameEditText);
-		final EditText mEditText2 = (EditText) findViewById(R.id.passwordEditText);
-		final Button loginButton = (Button) findViewById(R.id.loginButton);
-		final Button mButton2 = (Button) findViewById(R.id.facebookLoginButton);
-		final Button mButton3 = (Button) findViewById(R.id.registerButton);
-		mEditText1.setHint("Username");
-		mEditText2.setHint("Password");
-		// ~~~~~~~~~~~~~~鐧诲綍~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		loginButton.setOnClickListener(new OnClickListener() {
+		
+		etusername = (EditText) findViewById(R.id.usernameEditText);
+		etpassword = (EditText) findViewById(R.id.passwordEditText);
+		loginButton = (Button) findViewById(R.id.loginButton);
+		mButton2 = (Button) findViewById(R.id.facebookLoginButton);
+		mButton3 = (Button) findViewById(R.id.registerButton);
+		
+		p=new ProgressDialog(LoginActivity.this);
+		p.setTitle("Connecting to Server");
+		p.setMessage("In Progress");
+		
+		etusername.setHint("Username");
+		etpassword.setHint("Password");
+		
+		loginButton.setOnClickListener(new LoginOnclick() );
 
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				boolean flag = false;
-				String q = mEditText1.getText().toString();
-				String pass = mEditText2.getText().toString();
-				Intent intent2 = new Intent();
-				Intent startDiaryBookActivity = new Intent();
-				intent2.setClass(LoginActivity.this, RegisterActivity.class);
-				startDiaryBookActivity.setClass(LoginActivity.this, DiaryBookActivity.class);
-				startActivity(startDiaryBookActivity);
-/*				RegisterActivity qq = new RegisterActivity();
-				qq.QDatabase = openOrCreateDatabase(qq.DATABASE_NAME,
-						MODE_PRIVATE, null);// 鎵撳紑鏁版嵁搴�
-				// ~~~~~~~~~~~~~~~~~~鐢–ursor绫绘潵鎺ユ敹鏌ヨ鍒扮殑鏁版嵁~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-				Cursor cursor = qq.QDatabase.query(qq.TABLE_NAME, new String[] {
-						qq.QQ, qq.PASS }, null, null, null, null, null);
-				// ~~~~~~~~~~~~~~~~~鐢╠o..while寰幆楠岃瘉鏂囨湰妗嗚緭鍏ョ殑鍐呭鏄惁鍜屾暟鎹簱鐨勫惢鍚堬紝鏄氨灏唂lag鏀逛负true~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-				if (cursor != null) {
-					if (cursor.moveToFirst()) {
-						do {
-							if (q.equals(cursor.getString(0))
-									&& pass.equals(cursor.getString(1))) {
-								flag = true;
-							}
-						} while (cursor.moveToNext());
-					}
-				}
-				// ~~~~~~~~~~~~~~~~~~~楠岃瘉~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-				if (flag) {
-					startActivity(intent2);
-				} else {
-					startActivity(intent3);
-				}
-				qq.QDatabase.close();// 鍏抽棴
-*/
-				
-			}
-			
-		});
-		// ~~~~~~~~~~~~~~~閲嶇疆~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		mButton2.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				mEditText1.setText("");
-				mEditText2.setText("");
+				etusername.setText("");
+				etpassword.setText("");
 			}
 		});
-		// ~~~~~~~~~~~~~~娉ㄥ唽QQ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		
 		mButton3.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
@@ -85,4 +87,62 @@ public class LoginActivity extends Activity {
 			}
 		});
 	}
+	
+	private class LoginOnclick implements OnClickListener
+	{	
+		
+		public void onClick(View view) {
+			username=etusername.getText().toString().trim();
+			if (username==null||username.length()<=0) 
+			{		
+				etusername.requestFocus();
+				etusername.setError("Invalid Username");
+				return;
+			}else 
+			{
+				username=etusername.getText().toString().trim();
+			}
+			
+			password=etpassword.getText().toString().trim();
+			if (password==null||password.length()<=0) 
+			{		
+				etpassword.requestFocus();
+				etpassword.setError("Invalid password");
+				return;
+			}else 
+			{
+				password=etpassword.getText().toString().trim();
+			}
+			p.show();
+			new Thread(new Runnable() {
+
+				public void run() {
+					Operation operaton=new Operation();
+					String result=operaton.login("Login", username, password);		
+					Message msg=new Message();
+					msg.obj=result;
+					handler.sendMessage(msg);
+				}
+			}).start();
+
+		}
+	}	
+	Handler handler=new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			String string=(String) msg.obj;
+			p.setMessage(string);
+			p.dismiss();
+			if(string.equals("Successful")) {
+				Toast.makeText(LoginActivity.this, string, 0).show();
+				Intent intent = new Intent(LoginActivity.this, DiaryBookActivity.class);
+				startActivity(intent);
+				//finish();
+			}
+			if(string == null|| string.length() == 0) etusername.setText("Nothing");
+			else etusername.setText(string);
+			//Toast.makeText(LoginActivity.this, string, 0).show();
+			super.handleMessage(msg);
+		}	
+	};
 }
