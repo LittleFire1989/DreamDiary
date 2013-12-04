@@ -13,8 +13,8 @@
 	   	    android:background="#000000"
 	   	    android:orientation="horizontal" >
 
-	   	    <ImageView
-	   	        android:id="@+id/saveImageView"
+	   	    <ImageButton
+	   	        android:id="@+id/saveImageButton"
 	   	        android:layout_width="24dp"
 	   	        android:layout_height="match_parent"
 	   	        android:contentDescription="@string/save_dream"
@@ -62,7 +62,7 @@
     	android:background="@drawable/recorddiary_background6">
 
         <EditText
-            android:id="@+id/dreamRecordEditText"
+            android:id="@+id/dreamContentEditText"
             android:layout_width="match_parent"
             android:layout_height="431dp"
             android:ems="500"
