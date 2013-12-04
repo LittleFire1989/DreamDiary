@@ -85,5 +85,8 @@
     <string name="title_activity_dream_view">DreamView</string>
     <string name="title_activity_dream_edit">DreamEdit</string>
     <string name="title_activity_new_dream">NewDreamActivity</string>
+    
+    <string name="title_activity_me">Me Activity</string>
+    <string name="title_activity_welcome_main">Welcome Main Activity</string>
 
 </resources>
