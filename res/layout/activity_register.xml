@@ -5,13 +5,13 @@
     android:orientation="vertical"   >
     
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:background="@drawable/register_background5"
         android:orientation="vertical" >
         
         <LinearLayout
-            android:layout_width="match_parent" 
+            android:layout_width="fill_parent" 
             android:layout_height="wrap_content"
             android:layout_marginLeft="30.0px"
             android:layout_marginRight="30.0px"
@@ -20,7 +20,7 @@
             
             <TextView
 		        android:id="@+id/createAccountTextView"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:textColor="#F8F8FF"
                 android:textSize="16sp"
@@ -28,7 +28,7 @@
 		    
 		    <EditText
 		        android:id="@+id/addUsernameEditText"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="10dp"
 		        android:ems="10"
@@ -39,7 +39,7 @@
 		    
 		    <EditText
 		        android:id="@+id/addEmailEditText"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="10dp"
 		        android:ems="10"
@@ -50,7 +50,7 @@
 		    
 		    <EditText
 		        android:id="@+id/addPasswordEditText"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="10dp"
 		        android:ems="10"
@@ -61,7 +61,7 @@
 
 		    <EditText
 		        android:id="@+id/rePasswordEditText"
-		        android:layout_width="wrap_content"
+		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="10dp"
 		        android:ems="10"
