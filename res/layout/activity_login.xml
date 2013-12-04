@@ -39,7 +39,8 @@
                     android:hint="@string/username"
                     android:inputType="text|textEmailAddress"
                     android:text="@string/username_edit_text"
-                    android:textSize="12sp" />
+                    android:textSize="12sp" 
+                    android:textColor="#F8F8FF"/>
 
 			</LinearLayout>
 					    
@@ -63,7 +64,8 @@
 				    android:layout_height="wrap_content"
 					android:hint="@string/password"
 					android:inputType="textPassword"
-					android:textSize="12sp" />
+					android:textSize="12sp"
+					android:textColor="#F8F8FF" />
 			</LinearLayout>
 		</LinearLayout>
 
