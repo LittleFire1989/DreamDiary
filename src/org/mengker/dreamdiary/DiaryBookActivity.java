@@ -39,6 +39,7 @@ public class DiaryBookActivity extends ListActivity {
 		
 		if(dreamTime!=null && dreamTitle != null){
 			items.add(dreamTime + " " + dreamTitle);
+
 		}
 		
 		String itemArray[] = new String[items.size()];

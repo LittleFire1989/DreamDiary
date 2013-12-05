@@ -20,7 +20,6 @@
         <activity
             android:name="org.mengker.dreamdiary.NewDreamActivity"
             android:label="@string/title_activity_new_dream" >
-            
         </activity>
         <activity
             android:name="org.mengker.dreamdiary.RegisterActivity"
@@ -33,6 +32,10 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="org.mengker.share.ShareActivity"
+            android:label="@string/title_activity_share" >
         </activity>
         <activity
             android:name="org.mengker.dreamdiary.DreamView"
