@@ -22,36 +22,27 @@
 
 	   	    <ImageView
 	   	        android:id="@+id/voiceRecordImageView"
-	   	        android:layout_width="wrap_content"
-	   	        android:layout_height="wrap_content"
-	   	        android:layout_marginLeft="150dip"
+	   	        android:layout_width="29dp"
+	   	        android:layout_height="30dp"
+	   	        android:layout_marginLeft="170dip"
 	   	        android:contentDescription="@string/voice_record"
 	   	        android:src="@drawable/voice_record" />
 
 	   	    <ImageView
 	   	        android:id="@+id/addPhotoImageView"
 	   	        android:layout_width="29dp"
-	   	        android:layout_height="29dp"
+	   	        android:layout_height="30dp"
 	   	        android:layout_marginLeft="10dip"
 	   	        android:contentDescription="@string/add_photo"
 	   	        android:src="@drawable/add_photo" />
-
 	   	    
 	   	    <ImageView
 	   	        android:id="@+id/addLocationImageView"
 	   	        android:layout_width="29dp"
-	   	        android:layout_height="29dp"
+	   	        android:layout_height="30dp"
 	   	        android:layout_marginLeft="10dip"
 	   	        android:contentDescription="@string/add_photo"
 	   	        android:src="@drawable/location_place" />
-
-	   	    <ImageView
-	   	        android:id="@+id/moreOptionImageView"
-	   	        android:layout_width="29dp"
-	   	        android:layout_height="29dp"
-	   	        android:layout_marginLeft="10dip"
-	   	        android:contentDescription="@string/more_option"
-	   	        android:src="@drawable/more_option" />
 	   	</RadioGroup>
 
     <FrameLayout 
