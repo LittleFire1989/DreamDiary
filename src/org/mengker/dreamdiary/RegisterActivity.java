@@ -1,85 +1,133 @@
 package org.mengker.dreamdiary;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.mengker.bean.User;
+import org.mengker.net.Operation;
+import org.mengker.util.WriteJson;
+
+
+
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RegisterActivity extends Activity {
-        Button mButton2=null;
-        public  SQLiteDatabase QDatabase=null;
-        public  String DATABASE_NAME="QQDataBase.db";
-        public  String TABLE_NAME="myqq";
-        public  String QQ="qq";
-        public  String PASS="pass";
-        TextView mTextView3=null;
-        String sql="create table QQ(qq text primary key,pass text not null)";
-        //String sql="insert into QQ(qq,pass) value("+QQ+","+PASS+")";
-        private final String CREATE_TABLE="create table if not exists "+TABLE_NAME+" ("+QQ+" int primary key, "+PASS+" text)";
+	 private EditText etUsername=null;
+	 private EditText etEmail = null;
+	 private EditText etPassword = null;
+	 private EditText etRePassword = null;
+	 private TextView tvCreateAccount= null;
+	 private Button cButton = null;
+	 
+	 String jsonString=null;
+	 ProgressDialog dialog;
+     
+	 String username;
+	 String password;
+	 String email;
+	 String rePassword;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 // TODO Auto-generated method stub
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_register);
-                final EditText mEditText1=(EditText)findViewById(R.id.addUsernameEditText);
-                final EditText mEditText2=(EditText)findViewById(R.id.addEmailEditText);
-                final EditText mEditText3=(EditText)findViewById(R.id.addPasswordEditText);
-                final EditText mEditText4=(EditText)findViewById(R.id.rePasswordEditText);
-                mTextView3=(TextView)findViewById(R.id.createAccountTextView);
-                final Button mButton=(Button)findViewById(R.id.createButton);
-                mButton2=(Button)findViewById(R.id.createButton);
-                //~~~~~~~~~~~~~~注册QQ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                mButton.setOnClickListener(new OnClickListener() {
-                        
-                        @Override
-                        public void onClick(View v) {
-                                // TODO Auto-generated method stub
-                                QDatabase=openOrCreateDatabase(DATABASE_NAME, MODE_PRIVATE, null);
-                                QDatabase.execSQL(CREATE_TABLE);
-                                ContentValues cv=new ContentValues();
-                                cv.put(QQ, mEditText1.getText().toString());
-                                cv.put(PASS, mEditText2.getText().toString());
-                                QDatabase.insert(TABLE_NAME, null, cv);
-                                showData();
-                                QDatabase.close();
-                                
-                        }
-                });
-                //~~~~~~~~~~~~~~~~~删除QQ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                mButton2.setOnClickListener(new OnClickListener() {
-                        
-                        @Override
-                        public void onClick(View v) {
-                                // TODO Auto-generated method stub
-                                QDatabase=openOrCreateDatabase(DATABASE_NAME, MODE_PRIVATE, null);
-                                String whereClause="QQ=?";
-                                String[] whereArgs={mEditText1.getText().toString()};
-                                QDatabase.delete(TABLE_NAME, whereClause, whereArgs);
-                                showData();
-                                QDatabase.close();
-                        }
-                });
+                
+                etUsername=(EditText)findViewById(R.id.addUsernameEditText);
+           	    etEmail=(EditText)findViewById(R.id.addEmailEditText);
+           	    etPassword=(EditText)findViewById(R.id.addPasswordEditText);
+           	    etRePassword=(EditText)findViewById(R.id.rePasswordEditText);
+           	    tvCreateAccount=(TextView)findViewById(R.id.createAccountTextView);
+           	    cButton= (Button)findViewById(R.id.createButton);
+           	    dialog=new ProgressDialog(RegisterActivity.this);
+           	    dialog.setTitle("Registering");
+           	    dialog.setMessage("In progress");
+           	    
+           	    cButton.setOnClickListener(new SubmitOnclick());
         }
-        public void showData(){
-                mTextView3.setText("QQ用户资料"+"\n");
-                mTextView3.append("QQ\t\t密码\n");
-                String str[]={QQ,PASS};
-                Cursor cur=QDatabase.query(TABLE_NAME, str, null, null, null, null, null);
-                if(cur!=null){
-                        if(cur.moveToFirst()){
-                                do {
-                                        String qqString=cur.getString(0);
-                                        String passString=cur.getString(1);
-                                        mTextView3.append(qqString+"\t\t"+passString+"\n");
-                                } while (cur.moveToNext());
-                        }
-                }
-        }
+        
+        private class SubmitOnclick implements OnClickListener
+    	{
+    		public void onClick(View v) {
+    			username=etUsername.getText().toString().trim();
+    			password=etPassword.getText().toString().trim();
+    			rePassword = etRePassword.getText().toString().trim();
+    			email = etEmail.getText().toString().trim();
+    			
+    			if (username == null || username.length() == 0) 
+    			{  
+    				etUsername.requestFocus();
+    				etUsername.setError("Please input username correctly");			
+    				return ;
+    			}
+    			System.out.println(password + " and " + rePassword);
+    			if (!password.equals(rePassword)) 
+    			{  
+    				etUsername.requestFocus();
+    				etUsername.setError("Please input password correctly");			
+    				return ;
+    			}
+
+    			dialog.show();
+    			new Thread(new Runnable() {
+
+    				public void run() {
+
+    					Operation operaton=new Operation();
+    					
+    					System.out.println("username---->"+username);
+    					System.out.println("password--->"+ password);
+    					User user=new User(username, password, email);
+    					
+    					List<User> list=new ArrayList<User>();
+    					list.add(user);
+    					WriteJson writeJson=new WriteJson();
+    					
+    					jsonString= writeJson.getJsonData(list);
+                        System.out.println(jsonString); 
+    					String result= operaton.register("Register", jsonString);
+    					Message msg=new Message();
+    					System.out.println("result---->"+result);
+    					msg.obj=result;
+    					handler1.sendMessage(msg);
+    				}
+    			}).start();
+
+    		}
+    	}
+        
+        Handler handler1=new Handler()
+    	{
+    		@Override
+    		public void handleMessage(Message msg) {
+    			dialog.dismiss();
+    			String msgobj=msg.obj.toString();
+    			if(msgobj.equals("t"))
+    			{
+    				Toast.makeText(RegisterActivity.this, "Register success", 0).show();
+    				Intent intent=new Intent();
+    				intent.setClass(RegisterActivity.this, LoginActivity.class);
+    				startActivity(intent);
+    			}
+    			else {
+    				Toast.makeText(RegisterActivity.this, "Register unsuccessful", 0).show();
+    			}
+    			super.handleMessage(msg);
+    		}	
+    	};
 
 }

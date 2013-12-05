@@ -36,7 +36,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+//sas
 public class LoginActivity extends Activity {
 	private EditText etusername = null;
 	private EditText etpassword = null;

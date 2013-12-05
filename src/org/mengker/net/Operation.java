@@ -28,6 +28,7 @@ import org.apache.http.util.EntityUtils;
 
 
 
+
 import android.util.Log;
 
 
@@ -76,5 +77,39 @@ public class Operation {
 			e.printStackTrace();
 		}
 		return result;
+	}
+	
+	public String register(String uripath,String jsonString)
+	{ 
+		String result = null;
+		List<NameValuePair> list=new ArrayList<NameValuePair>();
+		NameValuePair nvp=new BasicNameValuePair("jsonstring", jsonString);
+		list.add(nvp);
+		ConnNet connNet=new ConnNet();
+		HttpPost httpPost=connNet.gethttPost(uripath);
+		try {
+			HttpEntity entity = new UrlEncodedFormEntity(list, HTTP.UTF_8);
+			httpPost.setEntity(entity);
+			HttpClient client=new DefaultHttpClient();
+			HttpResponse httpResponse=client.execute(httpPost);
+			if (httpResponse.getStatusLine().getStatusCode()==200)
+			{
+				result=EntityUtils.toString(httpResponse.getEntity(), "utf-8");	
+				System.out.println("result : "+result);
+			}
+			else {
+				System.out.println(httpResponse.getStatusLine().getStatusCode());
+				result="Connect not successful";
+			}
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (ClientProtocolException e) {			
+			e.printStackTrace();
+		} catch (ParseException e) {		
+			e.printStackTrace();
+		} catch (IOException e) {			
+			e.printStackTrace();
+		}
+		return result;  
 	}
 }
