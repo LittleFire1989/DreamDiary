@@ -5,14 +5,27 @@ public class Share {
 	private String userID;
 	private String message;
 	private String userName;
+	private String posttime;
 	
-	public Share(String shareID, String userID, String message, String userName) {
+	public Share(String shareID, String userID, String message, String userName,String posttime ) {
 		super();
 		this.shareID = shareID;
 		this.userID = userID;
 		this.message = message;
 		this.userName = userName;
+		this.posttime = posttime;
 	}
+	
+	
+	public String getPosttime() {
+		return posttime;
+	}
+
+
+	public void setPosttime(String posttime) {
+		this.posttime = posttime;
+	}
+
 
 	public String getUserName() {
 		return userName;

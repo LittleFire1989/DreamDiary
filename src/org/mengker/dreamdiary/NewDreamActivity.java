@@ -17,8 +17,8 @@ public class NewDreamActivity extends Activity {
 	ImageButton saveImageButton;
 	EditText dreamContentEditText;
 
-	String dreamTime;
-	String dreamTitle;
+	String dreamTime = "dreamTime";
+	String dreamTitle = "dreamTitle";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class NewDreamActivity extends Activity {
 				+ dreamTimeCalendar.get(Calendar.DAY_OF_MONTH) + " "
 				+ dreamTimeCalendar.get(Calendar.HOUR_OF_DAY) + ": "
 				+ dreamTimeCalendar.get(Calendar.MINUTE);
+		
 
 	}
 
@@ -54,13 +55,16 @@ public class NewDreamActivity extends Activity {
 
 		@Override
 		public void onClick(View v) {
-
+			dreamTitle = dreamContentEditText.getText().toString();
+			if(dreamTitle.length() > 10){
+				dreamTitle = dreamTitle.substring(0, 10);
+			}
 			Intent i = new Intent(NewDreamActivity.this,
 					DiaryBookActivity.class);
 			i.putExtra("dream_time", dreamTime);
 			i.putExtra("dream_title", dreamTitle);
 			startActivity(i);
-
+			finish();
 		}
 
 	}

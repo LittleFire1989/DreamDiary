@@ -13,32 +13,41 @@ import android.widget.Button;
 
 public class DiaryBookActivity extends ListActivity {
 	Button createNewDreamDiary;
-	ArrayList<String> items;
+	ArrayList<String> items = new ArrayList<String>();
+	String[] testItems = {"best", "second", "first"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_diary_book);
-		createNewDreamDiary = (Button) this.findViewById(R.id.createNewDreamDiary);
-		createNewDreamDiary.setOnClickListener(new OnClickListener(){
+		createNewDreamDiary = (Button) this
+				.findViewById(R.id.createNewDreamDiary);
+		createNewDreamDiary.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
-				Intent intent = new Intent(DiaryBookActivity.this, NewDreamActivity.class);
-			    startActivity(intent);
-			    finish();
+				Intent intent = new Intent(DiaryBookActivity.this,
+						NewDreamActivity.class);
+				startActivity(intent);
+				finish();
 			}
 		});
+
+		// get information from new dream
+		Intent intent = getIntent();
+
+		String dreamTime = intent.getStringExtra("dream_time");
+		String dreamTitle = intent.getStringExtra("dream_title");
 		
-		Bundle extras = getIntent().getExtras();
-		if (extras != null) {
-		    String dreamTime = extras.getString("dream_time");
-			String dreamTitle = extras.getString("dream_title");
-			items.add(dreamTime+" "+dreamTitle);
+		if(dreamTime!=null && dreamTitle != null){
+			items.add(dreamTime + " " + dreamTitle);
+
 		}
 		
-		setListAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1,
-				(String[])items.toArray()));
-		
+		String itemArray[] = new String[items.size()];
+		for(int i = 0; i < itemArray.length; i++){
+			itemArray[i] = (String)items.get(i);
+		}
+		 setListAdapter(new ArrayAdapter<String>(this,
+		 android.R.layout.simple_list_item_1, itemArray));
 	}
 
 	@Override
@@ -47,21 +56,21 @@ public class DiaryBookActivity extends ListActivity {
 		getMenuInflater().inflate(R.menu.dreams, menu);
 		return true;
 	}
-	
-	//navigate	
+
+	// navigate
 	public void startDiaryBookActivity(View view) {
-	    Intent intent = new Intent(this, DiaryBookActivity.class);
-	    startActivity(intent);
+		Intent intent = new Intent(this, DiaryBookActivity.class);
+		startActivity(intent);
 	}
-	
+
 	public void startExploreActivity(View view) {
-	    Intent intent = new Intent(this, ExploreActivity.class);
-	    startActivity(intent);
+		Intent intent = new Intent(this, ExploreActivity.class);
+		startActivity(intent);
 	}
-	
-//	public void startMeActivity(View view) {
-//	    Intent intent = new Intent(this, MeActivity.class);
-//	    startActivity(intent);
-//	}
+
+	// public void startMeActivity(View view) {
+	// Intent intent = new Intent(this, MeActivity.class);
+	// startActivity(intent);
+	// }
 
 }
