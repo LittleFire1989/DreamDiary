@@ -16,6 +16,10 @@
         <activity
             android:name="org.mengker.dreamdiary.LoginActivity"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="org.mengker.dreamdiary.NewDreamActivity"
@@ -28,10 +32,6 @@
         <activity
             android:name="org.mengker.dreamdiary.IndexActivity"
             android:label="@string/title_activity_index" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="org.mengker.share.ShareActivity"
@@ -42,7 +42,7 @@
             android:label="@string/title_activity_dream_view" >
         </activity>
         <activity
-            android:name="org.mengker.dreamdiary.Me"
+            android:name="org.mengker.dreamdiary.MeActivity"
             android:label="@string/title_activity_me" >
         </activity>
         <activity
@@ -56,6 +56,7 @@
          <activity
             android:name="org.mengker.dreamdiary.DiaryBookActivity"
             android:label="@string/title_activity_diary_book" >
+            
         </activity>
     </application>
 
