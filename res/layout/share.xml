@@ -3,17 +3,6 @@
     android:layout_height="fill_parent"
     android:visibility="visible" >
 
-    <ImageView
-        android:id="@+id/userPhotoImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="19dp"
-        android:maxHeight="20dp"
-        android:src="@drawable/amsu_menu_bg_d" />
-
     <TextView
         android:id="@+id/dreamDetailstextView"
         android:layout_width="wrap_content"
@@ -25,24 +14,35 @@
         android:textColor="#000000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/dateTextView"
+    <ImageView
+        android:id="@+id/userPhotoImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/dreamDetailstextView"
-        android:layout_below="@+id/dreamDetailstextView"
-        android:layout_marginTop="15dp"
-        android:text="@string/dream_user_post_date"
-        android:textColor="#000000"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:maxHeight="20dp"
+        android:layoutweight="4dp" />
 
     <TextView
         android:id="@+id/userNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/userPhotoImageView"
+        android:layout_marginLeft="31dp"
         android:layout_toRightOf="@+id/userPhotoImageView"
         android:text="@string/dream_user_name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dreamDetailstextView"
+        android:layout_marginTop="16dp"
+        android:text="@string/dream_user_post_date"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000" />
 
