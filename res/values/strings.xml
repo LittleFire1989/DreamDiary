@@ -74,6 +74,12 @@
     <string name="dream_user_name">Dream User Name</string>
     <string name="dream_user_detail">Dream Detail</string>
     <string name="dream_user_post_date">post date</string>
+    
+    <!-- MeActivity -->
+    <string name="me_me">Me</string>
+    <string name="me_facebook">My Facebook</string>
+    <string name="me_dream_reports">My dream reports</string>
+    <string name="me_settings">Settings</string>
 
     <!-- welcome -->
     <string name="welcome_title_text">Dream Diray</string>
@@ -84,7 +90,7 @@
     <string name="title_activity_diary_book">Diary Book</string>
     <string name="title_activity_dream_view">DreamView</string>
     <string name="title_activity_dream_edit">DreamEdit</string>
-    <string name="title_activity_new_dream">NewDreamActivity</string>
+    <string name="title_activity_new_dream">New Dream</string>
     
     <string name="title_activity_me">Me Activity</string>
     <string name="title_activity_welcome_main">Welcome Main Activity</string>

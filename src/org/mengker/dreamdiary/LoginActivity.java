@@ -41,6 +41,7 @@ public class LoginActivity extends Activity {
 	private EditText etusername = null;
 	private EditText etpassword = null;
 	private Button loginButton;
+	private Button skipButton;
 	private Button mButton2;
 	private Button mButton3 ;
 	private String username;
@@ -56,6 +57,7 @@ public class LoginActivity extends Activity {
 		etusername = (EditText) findViewById(R.id.usernameEditText);
 		etpassword = (EditText) findViewById(R.id.passwordEditText);
 		loginButton = (Button) findViewById(R.id.loginButton);
+		skipButton = (Button) findViewById(R.id.skipButton);
 		mButton2 = (Button) findViewById(R.id.facebookLoginButton);
 		mButton3 = (Button) findViewById(R.id.registerButton);
 		
@@ -67,6 +69,19 @@ public class LoginActivity extends Activity {
 		etpassword.setHint("Password");
 		
 		loginButton.setOnClickListener(new LoginOnclick() );
+		
+		skipButton.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+
+				Intent intent = new Intent(LoginActivity.this, DiaryBookActivity.class);
+				startActivity(intent);
+				finish();
+				
+			}
+			
+		});
 
 		mButton2.setOnClickListener(new OnClickListener() {
 

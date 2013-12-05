@@ -14,7 +14,6 @@ import android.widget.Button;
 public class DiaryBookActivity extends ListActivity {
 	Button createNewDreamDiary;
 	ArrayList<String> items = new ArrayList<String>();
-	String[] testItems = {"best", "second", "first"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +67,9 @@ public class DiaryBookActivity extends ListActivity {
 		startActivity(intent);
 	}
 
-	// public void startMeActivity(View view) {
-	// Intent intent = new Intent(this, MeActivity.class);
-	// startActivity(intent);
-	// }
+	 public void startMeActivity(View view) {
+	 Intent intent = new Intent(this, MeActivity.class);
+	 startActivity(intent);
+	 }
 
 }
