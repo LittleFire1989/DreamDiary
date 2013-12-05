@@ -1,16 +1,19 @@
 package org.mengker.dreamdiary;
 
-import android.app.Activity;
+import java.util.ArrayList;
+
+import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 
-public class DiaryBookActivity extends Activity {
+public class DiaryBookActivity extends ListActivity {
 	Button createNewDreamDiary;
-	DiaryBookActivity da = this;
+	ArrayList<String> items;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,17 @@ public class DiaryBookActivity extends Activity {
 			    finish();
 			}
 		});
+		
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+		    String dreamTime = extras.getString("dream_time");
+			String dreamTitle = extras.getString("dream_title");
+			items.add(dreamTime+" "+dreamTitle);
+		}
+		
+		setListAdapter(new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1,
+				(String[])items.toArray()));
 		
 	}
 
