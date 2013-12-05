@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -144,12 +145,18 @@ public class ExploreActivity extends Activity {
 			TextView tempUser = (TextView) convertView.findViewById(R.id.userNameTextView);
 			TextView tempDate = (TextView) convertView.findViewById(R.id.dateTextView);
 			//wh.wbimage = (ImageView) convertView.findViewById(R.id.wbimage);
+			ImageView tempImage = (ImageView) convertView.findViewById(R.id.userPhotoImageView);
 			Share wb = wbList.get(position);
 			if (wb != null) {
 				convertView.setTag(wb.getShareID());
 				tempTV.setText(wb.getMessage());
 				tempUser.setText(wb.getUserName(), TextView.BufferType.SPANNABLE);
 				tempDate.setText(wb.getPosttime());
+				if(wb.getUserName().equals("allen")) tempImage.setImageResource(R.drawable.allen_photo);
+				else if(wb.getUserName().equals("mandy")) tempImage.setImageResource(R.drawable.mandy_photo);
+				else if(wb.getUserName().equals("YueZhao")) tempImage.setImageResource(R.drawable.yue_photo);
+				else if(wb.getUserName().equals("Rubby")) tempImage.setImageResource(R.drawable.yue_photo);
+				else tempImage.setImageResource(R.drawable.save);
 
 			}
 
