@@ -22,8 +22,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="19dp"
-        android:maxHeight="20dp"
-         />
+        android:maxHeight="20dp" />
 
     <TextView
         android:id="@+id/userNameTextView"
