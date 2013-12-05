@@ -32,12 +32,13 @@ public class DiaryBookActivity extends ListActivity {
 		if (extras != null) {
 		    String dreamTime = extras.getString("dream_time");
 			String dreamTitle = extras.getString("dream_title");
+			createNewDreamDiary.setText(dreamTime + " " + dreamTitle);
 			items.add(dreamTime+" "+dreamTitle);
 		}
 		
-		setListAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1,
-				(String[])items.toArray()));
+//		setListAdapter(new ArrayAdapter<String>(this,
+//				android.R.layout.simple_list_item_1,
+//				(String[])items.toArray()));
 		
 	}
 
