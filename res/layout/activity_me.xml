@@ -1,23 +1,85 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/me_listview"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_horizontal_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_horizontal_margin"
-    tools:context=".MeActivity" >
+    android:orientation="vertical" >
+	
+    <TabWidget 
+    		android:id="@android:id/tabs"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="0.0"
+    		android:visibility="gone"/>
 
-    <ListView
-        android:id="@android:id/list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="0.2"
-        android:divider="#DCDCDC"
-    	android:dividerHeight="3px"
-        android:listSelector="#00000000" 
-        android:cacheColorHint="#00000000">
-    </ListView>   
+
+   	<FrameLayout
+   	    android:id="@android:id/tabcontent"
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="0.0dip"
+   	    android:layout_weight="34.40" >
+
+   		<LinearLayout
+   		    android:layout_width="match_parent"
+   		    android:layout_height="match_parent"
+   		    android:orientation="vertical" >
+
+   			<ListView
+   			    android:id="@android:id/list"
+   			    android:layout_width="match_parent"
+   			    android:layout_height="wrap_content" 
+   			    android:divider="#DCDCDC" 
+   			    android:dividerHeight="3px"
+ 			    android:fastScrollEnabled="true">
+   			</ListView>
+   			
+   			<TextView android:id="@android:id/empty"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="No data"/>
+
+   		</LinearLayout>
+
+	</FrameLayout>
+   	<TabWidget 
+    		android:id="@android:id/tabs"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="0.0"
+    		android:visibility="gone"/>
+
+   	<RadioGroup
+   	    android:id="@+id/indexBar"
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="wrap_content"
+   	    android:layout_weight="0.0"
+   	    android:background="@drawable/amsu_menu_toolbar_bg"
+   	    android:gravity="center_vertical"
+   	    android:orientation="horizontal" >
+
+   	    <RadioButton
+   	        android:id="@+id/diary_book_radio_button"
+   	        style="@style/main_tab_bottom"
+   	        android:layout_marginTop="1.0dip"
+   	        android:drawableTop="@drawable/logo_ss"
+   	        android:text="@string/dream_diary" 
+   	        android:onClick="startDiaryBookActivity"/>
+
+   	    <RadioButton
+   	        android:id="@+id/explore_radio_button"
+   	        style="@style/main_tab_bottom"
+   	        android:layout_marginTop="1.0dip"
+   	        android:drawableTop="@drawable/amsu_menu_search"
+   	        android:text="@string/dream_explore"
+   	        android:onClick="startExploreActivity" />
+
+   	    <RadioButton
+   	        android:id="@+id/me_radio_button"
+   	        style="@style/main_tab_bottom"
+   	        android:layout_marginTop="1.0dip"
+   	        android:drawableTop="@drawable/amsu_menu_user"
+   	        android:text="@string/dream_about_me" 
+   	        android:onClick="startMeActivity"/>
+   	</RadioGroup>
 
 </LinearLayout>

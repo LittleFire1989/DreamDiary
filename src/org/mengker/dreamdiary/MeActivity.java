@@ -3,8 +3,10 @@ package org.mengker.dreamdiary;
 import java.util.ArrayList;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ArrayAdapter;
 
 public class MeActivity extends ListActivity {
@@ -34,5 +36,19 @@ public class MeActivity extends ListActivity {
 		getMenuInflater().inflate(R.menu.me, menu);
 		return true;
 	}
+	// navigate
+	public void startDiaryBookActivity(View view) {
+		Intent intent = new Intent(this, DiaryBookActivity.class);
+		startActivity(intent);
+	}
 
+	public void startExploreActivity(View view) {
+		Intent intent = new Intent(this, ExploreActivity.class);
+		startActivity(intent);
+	}
+
+	 public void startMeActivity(View view) {
+	 Intent intent = new Intent(this, MeActivity.class);
+	 startActivity(intent);
+	 }
 }
