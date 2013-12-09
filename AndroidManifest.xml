@@ -34,8 +34,8 @@
             android:label="@string/title_activity_share" >
         </activity>
         <activity
-            android:name="org.mengker.dreamdiary.DreamView"
-            android:label="@string/title_activity_dream_view" >
+            android:name="org.mengker.dreamdiary.EditDreamActivity"
+            android:label="@string/title_activity_edit_dream" >
         </activity>
         <activity
             android:name="org.mengker.dreamdiary.MeActivity"
