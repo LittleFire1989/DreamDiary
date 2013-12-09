@@ -30,10 +30,6 @@
             android:label="@string/title_activity_register" >
         </activity>
         <activity
-            android:name="org.mengker.dreamdiary.IndexActivity"
-            android:label="@string/title_activity_index" >
-        </activity>
-        <activity
             android:name="org.mengker.share.ShareActivity"
             android:label="@string/title_activity_share" >
         </activity>
