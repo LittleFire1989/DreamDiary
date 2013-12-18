@@ -12,9 +12,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class NewDreamActivity extends Activity {
-	ImageButton saveImageButton;
+	ImageView saveImageButton;
 	EditText dreamContentEditText;
 
 	String dreamTime = "dreamTime";
@@ -26,12 +27,12 @@ public class NewDreamActivity extends Activity {
 		setContentView(R.layout.activity_new_dream);
 
 		// define widgets
-		saveImageButton = (ImageButton) this.findViewById(R.id.saveImageButton);
+		saveImageButton = (ImageView) this.findViewById(R.id.saveImageView);
 		dreamContentEditText = (EditText) this
 				.findViewById(R.id.dreamContentEditText);
 
 		saveImageButton
-				.setOnClickListener(new SaveImageButtonOnClickListener());
+				.setOnClickListener(new SaveImageViewOnClickListener());
 
 		Calendar dreamTimeCalendar = new GregorianCalendar();
 		dreamTimeCalendar.setTime(new Date());
@@ -51,7 +52,7 @@ public class NewDreamActivity extends Activity {
 		return true;
 	}
 
-	class SaveImageButtonOnClickListener implements OnClickListener {
+	class SaveImageViewOnClickListener implements OnClickListener {
 
 		@Override
 		public void onClick(View v) {

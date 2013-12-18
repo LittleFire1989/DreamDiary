@@ -18,7 +18,7 @@
             android:layout_height="match_parent" >
 
             <ImageView
-                android:id="@+id/saveImageButton"
+                android:id="@+id/saveImageView"
                 android:layout_width="24dp"
                 android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
