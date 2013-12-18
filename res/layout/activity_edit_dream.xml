@@ -12,37 +12,49 @@
 	   	    android:layout_weight="0.02"
 	   	    android:background="#000000"
 	   	    android:orientation="horizontal" >
+	   	    
+	   	    <RelativeLayout 
+	   	        android:layout_width="fill_parent"
+	   	        android:layout_height="wrap_content">
 
 	   	    <ImageView
 	   	        android:id="@+id/saveImageView"
 	   	        android:layout_width="24dp"
 	   	        android:layout_height="30dp"
 	   	        android:contentDescription="@string/save_dream"
+	   	        android:layout_alignParentLeft="true"
 	   	        android:src="@drawable/save" />
+	   	    
+	   	    
+	   	    
+	   	    <ImageView
+	   	        android:id="@+id/dreamShareImageView"
+	   	        android:layout_width="29dp"
+	   	        android:layout_height="30dp"
+	   	        android:contentDescription="@string/dream_share"
+	   	        android:layout_alignParentRight="true"
+	   	        android:src="@drawable/dream_share" />
+	   	    
+	   	     <ImageView
+	   	        android:id="@+id/dreamRemoveImageView"
+	   	        android:layout_width="29dp"
+	   	        android:layout_height="30dp"
+	   	        android:layout_toLeftOf="@id/dreamShareImageView"
+	   	        android:contentDescription="@string/dream_remove"
+	   	        android:src="@drawable/dream_remove" />
 
 	   	    <ImageView
 	   	        android:id="@+id/editDreamImageView"
 	   	        android:layout_width="29dp"
 	   	        android:layout_height="30dp"
-	   	        android:layout_marginLeft="170dip"
+	   	        android:layout_toLeftOf="@id/dreamRemoveImageView"
 	   	        android:contentDescription="@string/dream_edit"
 	   	        android:src="@drawable/dream_edit" />
 
-	   	    <ImageView
-	   	        android:id="@+id/dreamRemoveImageView"
-	   	        android:layout_width="29dp"
-	   	        android:layout_height="30dp"
-	   	        android:layout_marginLeft="10dip"
-	   	        android:contentDescription="@string/dream_remove"
-	   	        android:src="@drawable/dream_remove" />
+	   	   
 
-	   	    <ImageView
-	   	        android:id="@+id/dreamShareImageView"
-	   	        android:layout_width="29dp"
-	   	        android:layout_height="30dp"
-	   	        android:layout_marginLeft="10dip"
-	   	        android:contentDescription="@string/dream_share"
-	   	        android:src="@drawable/dream_share" />
+	   	    
+	   	    </RelativeLayout>
 	   	</RadioGroup>
 
     <FrameLayout
