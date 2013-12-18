@@ -136,7 +136,7 @@
 	</LinearLayout>
 	
     
- 	<LinearLayout
+ 	<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="-44.0dip"
@@ -146,14 +146,14 @@
 	        android:id="@+id/skipButton"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="250.0dip"
+	        android:layout_alignParentRight = "true"
 	        android:layout_marginTop="2.0dip"
 	        android:background="@drawable/amsu_menu_toolbar_bg"
 	        android:text="@string/skip_button"
 	        android:textColor="#F8F8FF"
 	        android:textSize="14sp" />
  
-    </LinearLayout>
+    </RelativeLayout>
     
 </LinearLayout>
 
