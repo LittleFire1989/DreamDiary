@@ -35,6 +35,7 @@
 	   	        android:layout_alignParentRight="true"
 	   	        android:src="@drawable/dream_share" />
 	   	    
+	   	    
 	   	     <ImageView
 	   	        android:id="@+id/dreamRemoveImageView"
 	   	        android:layout_width="29dp"
