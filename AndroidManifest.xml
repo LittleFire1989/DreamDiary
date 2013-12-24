@@ -16,10 +16,6 @@
         <activity
             android:name="com.dreamingkid.dreamdiary.LoginActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.dreamingkid.dreamdiary.NewDreamActivity"
@@ -51,8 +47,11 @@
         </activity>
          <activity
             android:name="com.dreamingkid.dreamdiary.DiaryBookActivity"
-            android:label="@string/title_activity_diary_book" >
-            
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

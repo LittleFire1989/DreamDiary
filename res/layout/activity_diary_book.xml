@@ -18,13 +18,13 @@
 
 		 <Button
 	            
-	        android:id="@+id/createNewDreamDiary"
+	        android:id="@+id/addDream"
 	        android:layout_width="fill_parent" 
 	        android:layout_height="wrap_content" 
 	        android:gravity="center_vertical|center_horizontal" 
 	        android:focusable="true" 
 			android:background="@anim/button_style"
-	        android:text="@string/create_new_dream_diary" 
+	        android:text="@string/add_dream" 
 	        android:textColor="#F8F8FF"/> 
 	    
    		    		

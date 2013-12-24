@@ -58,9 +58,10 @@
     <string name="add_photo">Add Photo</string>
     <string name="more_option">More Option</string>
     <string name="location_place">Location Place</string>
-    <!-- Diary -->
+    
+    <!-- Diary Book-->
 
-    <string name="create_new_dream_diary">Create a New Dream Diary</string>
+    <string name="add_dream">Add a New Dream</string>
 
     <!-- Dream Edit -->
     <string name="dream_edit">Edit the dream</string>

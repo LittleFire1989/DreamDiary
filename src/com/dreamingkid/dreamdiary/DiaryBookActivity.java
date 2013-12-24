@@ -22,7 +22,7 @@ public class DiaryBookActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_diary_book);
 		createNewDreamDiary = (Button) this
-				.findViewById(R.id.createNewDreamDiary);
+				.findViewById(R.id.addDream);
 		createNewDreamDiary.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(DiaryBookActivity.this,
