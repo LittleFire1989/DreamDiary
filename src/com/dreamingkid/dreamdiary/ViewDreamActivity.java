@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class EditDreamActivity extends Activity {
+public class ViewDreamActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_edit_dream);
+		setContentView(R.layout.activity_view_dream);
 	}
 
 	@Override

@@ -42,10 +42,12 @@
 
     <string name="add_dream">Add a New Dream</string>
 
-    <!-- Dream Edit -->
-    <string name="dream_edit">Edit the dream</string>
-    <string name="dream_remove">Remove the dream</string>
-    <string name="dream_share">Share the dream</string>
+    <!-- View Dream Activity (organized) -->
+    <string name="title_activity_view_dream">View Dream</string>
+    <!-- <string name="save_dream">Save</string> already in the Add Dream Activity -->
+    <string name="edit_dream">Edit the dream</string>
+    <string name="remove_dream">Remove the dream</string>
+    <string name="share_dream">Share the dream</string>
 
     <!-- Dream View -->
     <string name="dream_title">Dream Title</string>
@@ -69,7 +71,7 @@
     <string name="welcome_subtitle_text2">in which one is aware that one is dreaming</string>
     <string name="title_activity_share">ShareActivity</string>
     <string name="title_activity_diary_book">Diary Book</string>
-    <string name="title_activity_dream_view">DreamView</string>
+    
     <string name="title_activity_dream_edit">DreamEdit</string>
 
     

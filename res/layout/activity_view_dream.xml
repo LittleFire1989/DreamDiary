@@ -31,7 +31,7 @@
 	   	        android:id="@+id/dreamShareImageView"
 	   	        android:layout_width="29dp"
 	   	        android:layout_height="30dp"
-	   	        android:contentDescription="@string/dream_share"
+	   	        android:contentDescription="@string/share_dream"
 	   	        android:layout_alignParentRight="true"
 	   	        android:src="@drawable/dream_share" />
 	   	    
@@ -41,7 +41,7 @@
 	   	        android:layout_width="29dp"
 	   	        android:layout_height="30dp"
 	   	        android:layout_toLeftOf="@id/dreamShareImageView"
-	   	        android:contentDescription="@string/dream_remove"
+	   	        android:contentDescription="@string/remove_dream"
 	   	        android:src="@drawable/dream_remove" />
 
 	   	    <ImageView
@@ -49,7 +49,7 @@
 	   	        android:layout_width="29dp"
 	   	        android:layout_height="30dp"
 	   	        android:layout_toLeftOf="@id/dreamRemoveImageView"
-	   	        android:contentDescription="@string/dream_edit"
+	   	        android:contentDescription="@string/edit_dream"
 	   	        android:src="@drawable/dream_edit" />
 
 	   	   

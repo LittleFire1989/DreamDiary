@@ -30,8 +30,8 @@
             android:label="@string/title_activity_share" >
         </activity>
         <activity
-            android:name="com.dreamingkid.dreamdiary.EditDreamActivity"
-            android:label="@string/title_activity_edit_dream" >
+            android:name="com.dreamingkid.dreamdiary.ViewDreamActivity"
+            android:label="@string/title_activity_view_dream" >
         </activity>
         <activity
             android:name="com.dreamingkid.dreamdiary.MeActivity"

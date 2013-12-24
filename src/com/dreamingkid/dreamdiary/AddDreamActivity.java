@@ -16,6 +16,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+/*
+ * Programming plan:
+ * Step 0: display with fancy list
+ * Step 1: create a simple dream with AddDreamActivity, the data then are stored in the phone
+ * Step 2: new dreams and old dreams can be displayed in the diary book
+ * Step 3: every item in the list can be edit or delete, edit dream is another activity
+ */
+
 public class AddDreamActivity extends Activity {
 	ImageView saveImageButton;
 	EditText dreamContentEditText;
