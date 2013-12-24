@@ -1,4 +1,4 @@
-package org.mengker.dreamdiary;
+package com.dreamingkid.dreamdiary;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -18,10 +18,16 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import org.mengker.net.Operation;
 
 
 
+
+
+
+
+
+import com.dreamingkid.dreamdiary.R;
+import com.dreamingkid.net.Operation;
 
 import android.os.Bundle;
 import android.os.Handler;

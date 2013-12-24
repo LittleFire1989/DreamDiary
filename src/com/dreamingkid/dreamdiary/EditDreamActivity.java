@@ -1,4 +1,6 @@
-package org.mengker.dreamdiary;
+package com.dreamingkid.dreamdiary;
+
+import com.dreamingkid.dreamdiary.R;
 
 import android.os.Bundle;
 import android.app.Activity;

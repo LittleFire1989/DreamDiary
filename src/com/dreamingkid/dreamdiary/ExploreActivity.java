@@ -1,14 +1,14 @@
-package org.mengker.dreamdiary;
+package com.dreamingkid.dreamdiary;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.mengker.dreamdiary.R;
-import org.mengker.dreamdiary.R.layout;
-import org.mengker.dreamdiary.R.menu;
-import org.mengker.net.Operation;
-import org.mengker.share.Share;
-import org.mengker.util.JsonUtil;
+import com.dreamingkid.dreamdiary.R;
+import com.dreamingkid.dreamdiary.R.layout;
+import com.dreamingkid.dreamdiary.R.menu;
+import com.dreamingkid.net.Operation;
+import com.dreamingkid.share.Share;
+import com.dreamingkid.util.JsonUtil;
 
 import android.os.Bundle;
 import android.os.Handler;

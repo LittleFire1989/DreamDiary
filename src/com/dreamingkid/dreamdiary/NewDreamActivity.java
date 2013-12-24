@@ -1,8 +1,10 @@
-package org.mengker.dreamdiary;
+package com.dreamingkid.dreamdiary;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+
+import com.dreamingkid.dreamdiary.R;
 
 import android.app.Activity;
 import android.content.Intent;

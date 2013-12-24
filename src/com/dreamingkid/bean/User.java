@@ -1,4 +1,4 @@
-package org.mengker.bean;
+package com.dreamingkid.bean;
 
 public class User {
 

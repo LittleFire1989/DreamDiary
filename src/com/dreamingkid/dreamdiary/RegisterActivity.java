@@ -1,14 +1,22 @@
-package org.mengker.dreamdiary;
+package com.dreamingkid.dreamdiary;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.mengker.bean.User;
-import org.mengker.net.Operation;
-import org.mengker.util.WriteJson;
 
 
+
+
+
+
+
+
+
+import com.dreamingkid.bean.User;
+import com.dreamingkid.dreamdiary.R;
+import com.dreamingkid.net.Operation;
+import com.dreamingkid.util.WriteJson;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

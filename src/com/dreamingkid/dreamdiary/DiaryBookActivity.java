@@ -1,6 +1,8 @@
-package org.mengker.dreamdiary;
+package com.dreamingkid.dreamdiary;
 
 import java.util.ArrayList;
+
+import com.dreamingkid.dreamdiary.R;
 
 import android.app.ListActivity;
 import android.content.Intent;

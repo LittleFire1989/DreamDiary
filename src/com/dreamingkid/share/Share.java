@@ -1,4 +1,4 @@
-package org.mengker.share;
+package com.dreamingkid.share;
 
 public class Share {
 	private String shareID;
