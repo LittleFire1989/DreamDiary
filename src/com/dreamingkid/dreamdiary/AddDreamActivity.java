@@ -18,7 +18,8 @@ import android.widget.ImageView;
 
 /*
  * Programming plan:
- * Step 0: display with fancy list
+ * Step 0: display with fancy list; click the items will navigate to the view dream
+ * --> Complete
  * Step 1: create a simple dream with AddDreamActivity, the data then are stored in the phone
  * Step 2: new dreams and old dreams can be displayed in the diary book
  * Step 3: every item in the list can be edit or delete, edit dream is another activity

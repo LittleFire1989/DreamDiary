@@ -18,8 +18,8 @@ import android.widget.TextView;
 
 /*
  * Programming plan:
- * Step 0: display with fancy list;
- *       click the items will navigate to the view dream
+ * Step 0: display with fancy list; click the items will navigate to the view dream
+ * --> Complete
  * Step 1: create a simple dream with AddDreamActivity, the data then are stored in the phone
  * Step 2: new dreams and old dreams can be displayed in the diary book
  * Step 3: every item in the list can be edit or delete, edit dream is another activity
@@ -104,10 +104,6 @@ public class DiaryBookActivity extends ListActivity {
 		setListAdapter(new LabeledAdapter(this));
 	}
 	
-	private String getModel(int position){
-		return ((LabeledAdapter)getListAdapter()).getItem(position);
-	}
-	
 	@Override
 	public void onListItemClick(ListView parent, View v, int position, long id){
 		// The method is to be modified
@@ -167,6 +163,9 @@ public class DiaryBookActivity extends ListActivity {
 			if(items.get(position).contains("7")){
 				wrapper.getDreamTypeTextView().setText("Lucid");
 			}
+			else{
+				wrapper.getDreamTypeTextView().setText("Normal");
+			}
 			
 			return (row);
 		}
@@ -183,18 +182,20 @@ public class DiaryBookActivity extends ListActivity {
 		
 		TextView getDreamAbsTextView(){
 			if(dreamAbsTextView == null){
-				dreamAbsTextView = (TextView)base.findViewById(R.id.dreamAbsTextView);
+				dreamAbsTextView=(TextView)base.findViewById(R.id.dreamAbsTextView);
 			}
-			return (dreamAbsTextView);
+			
+			return dreamAbsTextView;
 		}
 		
 		TextView getDreamTypeTextView(){
 			if(dreamTypeTextView == null){
-				dreamTypeTextView = (TextView)base.findViewById(R.id.dreamTypeTextView);
+				dreamTypeTextView=(TextView)base.findViewById(R.id.dreamTypeTextView);
 			}
-			return (dreamTypeTextView);
+			
+			return dreamTypeTextView;
 		}
-		
+				
 	}
 
 }
