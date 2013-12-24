@@ -13,6 +13,14 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
+/*
+ * Programming plan:
+ * Step 1: create a simple dream with AddDreamActivity, the data then are stored in the phone
+ * Step 2: new dreams and old dreams can be displayed in the diary book
+ * Step 3: every item in the list can be edit or delete, edit dream is another activity
+ */
+
+
 public class DiaryBookActivity extends ListActivity {
 	Button createNewDreamDiary;
 	ArrayList<String> items = new ArrayList<String>();
@@ -26,7 +34,7 @@ public class DiaryBookActivity extends ListActivity {
 		createNewDreamDiary.setOnClickListener(new OnClickListener() {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(DiaryBookActivity.this,
-						NewDreamActivity.class);
+						AddDreamActivity.class);
 				startActivity(intent);
 				finish();
 			}
@@ -57,7 +65,9 @@ public class DiaryBookActivity extends ListActivity {
 		getMenuInflater().inflate(R.menu.dreams, menu);
 		return true;
 	}
-
+/*
+ * The first version only has the dream record function
+ * 
 	// navigate
 	public void startDiaryBookActivity(View view) {
 		Intent intent = new Intent(this, DiaryBookActivity.class);
@@ -73,5 +83,6 @@ public class DiaryBookActivity extends ListActivity {
 	 Intent intent = new Intent(this, MeActivity.class);
 	 startActivity(intent);
 	 }
+*/
 
 }

@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class NewDreamActivity extends Activity {
+public class AddDreamActivity extends Activity {
 	ImageView saveImageButton;
 	EditText dreamContentEditText;
 
@@ -26,7 +26,7 @@ public class NewDreamActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_new_dream);
+		setContentView(R.layout.activity_add_dream);
 
 		// define widgets
 		saveImageButton = (ImageView) this.findViewById(R.id.saveImageView);
@@ -62,7 +62,7 @@ public class NewDreamActivity extends Activity {
 			if(dreamTitle.length() > 10){
 				dreamTitle = dreamTitle.substring(0, 10);
 			}
-			Intent i = new Intent(NewDreamActivity.this,
+			Intent i = new Intent(AddDreamActivity.this,
 					DiaryBookActivity.class);
 			i.putExtra("dream_time", dreamTime);
 			i.putExtra("dream_title", dreamTitle);

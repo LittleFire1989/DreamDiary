@@ -6,12 +6,6 @@
     <string name="action_search">Search</string>
     <string name="action_compose">Compose</string>
 
-    <!-- test page -->
-    <string name="test_login_activity_button">Test Login</string>
-    <string name="test_record_activity_button">Test Record</string>
-    <string name="test_register_activity_button">Test Register</string>
-    <string name="test_share_activity_button">Test share</string>
-
     <!-- main -->
     <string name="dream_record">Record</string>
     <string name="dream_diary">Diary</string>
@@ -39,27 +33,12 @@
     <string name="repassword_edit_text">Re-password</string>
     <string name="create_button">Create</string>
 
-    <!-- record -->
-    <string name="done_button">Done</string>
-    <string name="more_option_button">More Option</string>
-    <string name="normal_radioButton">Normal</string>
-    <string name="Half_lucid_radioButton">Half Lucid</string>
-    <string name="lucid_radioButton">Lucid</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_record">RecordActivity</string>
-    <string name="title_activity_register">RegisterActivity</string>
-    <string name="title_activity_index">IndexActivity</string>
-    <string name="title_activity_edit_dream">EditDreamActivity</string>
-    <string name="test_dream_record">Test</string>
-    <string name="text_record">Text</string>
+    <!-- Add Dream Activity (organized) -->
+    <string name="title_activity_add_dream">Add a Dream</string>
     <string name="save_dream">Save</string>
     <string name="voice_record">Voice Record</string>
-    <string name="add_photo">Add Photo</string>
-    <string name="more_option">More Option</string>
-    <string name="location_place">Location Place</string>
     
-    <!-- Diary Book-->
+    <!-- Diary Book Activity (organized) -->
 
     <string name="add_dream">Add a New Dream</string>
 
@@ -92,9 +71,27 @@
     <string name="title_activity_diary_book">Diary Book</string>
     <string name="title_activity_dream_view">DreamView</string>
     <string name="title_activity_dream_edit">DreamEdit</string>
-    <string name="title_activity_new_dream">New Dream</string>
+
     
     <string name="title_activity_me">Me Activity</string>
     <string name="title_activity_welcome_main">Welcome Main Activity</string>
+    
+    <!-- Others -->
+    <string name="done_button">Done</string>
+    <string name="more_option_button">More Option</string>
+    <string name="normal_radioButton">Normal</string>
+    <string name="Half_lucid_radioButton">Half Lucid</string>
+    <string name="lucid_radioButton">Lucid</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_index">IndexActivity</string>
+    <string name="title_activity_edit_dream">EditDreamActivity</string>
+    <string name="test_dream_record">Test</string>
+    <string name="text_record">Text</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="more_option">More Option</string>
+    <string name="location_place">Location Place</string>
+    
 
 </resources>

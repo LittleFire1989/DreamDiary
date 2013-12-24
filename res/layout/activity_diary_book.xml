@@ -64,7 +64,8 @@
     		android:layout_height="wrap_content"
     		android:layout_weight="0.0"
     		android:visibility="gone"/>
-
+<!-- 
+The first version only has the record function
    	<RadioGroup
    	    android:id="@+id/indexBar"
    	    android:layout_width="fill_parent"
@@ -98,5 +99,5 @@
    	        android:text="@string/dream_about_me" 
    	        android:onClick="startMeActivity"/>
    	</RadioGroup>
-
+ -->
 </LinearLayout>
