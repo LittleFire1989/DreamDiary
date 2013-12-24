@@ -104,6 +104,10 @@ public class DiaryBookActivity extends ListActivity {
 		setListAdapter(new LabeledAdapter(this));
 	}
 	
+	private String getModel(int position){
+		return ((LabeledAdapter)getListAdapter()).getItem(position);
+	}
+	
 	@Override
 	public void onListItemClick(ListView parent, View v, int position, long id){
 		// The method is to be modified
@@ -144,26 +148,53 @@ public class DiaryBookActivity extends ListActivity {
 		
 		public View getView (int position, View convertView, ViewGroup parent){
 			View row = convertView;
+			ViewWrapper wrapper = null;
 			
 			if(row == null){
 				LayoutInflater inflater = context.getLayoutInflater();
 				row = inflater.inflate(R.layout.activity_diary_book_row, null);
+				wrapper = new ViewWrapper(row);
+				row.setTag(wrapper);
+			}
+			else{
+				wrapper = (ViewWrapper)row.getTag();
 			}
 			
-			TextView dreamAbs = (TextView)row.findViewById(R.id.dreamAbsTextView);
-			
-			dreamAbs.setText(items.get(position));
+			wrapper.getDreamAbsTextView().setText(items.get(position));
 			
 			//the if condition is for test purpose
 			//the implementation should be modified in the future
 			if(items.get(position).contains("7")){
-				TextView dreamTypeTextView = (TextView)row.findViewById(R.id.dreamTypeTextView);
-				
-				dreamTypeTextView.setText("Lucid");
+				wrapper.getDreamTypeTextView().setText("Lucid");
 			}
 			
 			return (row);
 		}
+	}
+	
+	class ViewWrapper{
+		View base;
+		TextView dreamAbsTextView = null;
+		TextView dreamTypeTextView = null;
+		
+		ViewWrapper(View base){
+			this.base = base;
+		}
+		
+		TextView getDreamAbsTextView(){
+			if(dreamAbsTextView == null){
+				dreamAbsTextView = (TextView)base.findViewById(R.id.dreamAbsTextView);
+			}
+			return (dreamAbsTextView);
+		}
+		
+		TextView getDreamTypeTextView(){
+			if(dreamTypeTextView == null){
+				dreamTypeTextView = (TextView)base.findViewById(R.id.dreamTypeTextView);
+			}
+			return (dreamTypeTextView);
+		}
+		
 	}
 
 }
