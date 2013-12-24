@@ -2,15 +2,19 @@ package com.dreamingkid.dreamdiary;
 
 import java.util.ArrayList;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 /*
  * Programming plan:
@@ -53,6 +57,30 @@ public class DiaryBookActivity extends ListActivity {
 		items.add("2013-12-23 Dream 10");
 		items.add("2013-12-24 Dream 11");
 		items.add("2013-12-25 Dream 12");
+		items.add("2013-12-23 Dream 1");
+		items.add("2013-12-24 Dream 2");
+		items.add("2013-12-25 Dream 3");
+		items.add("2013-12-23 Dream 4");
+		items.add("2013-12-24 Dream 5");
+		items.add("2013-12-25 Dream 6");
+		items.add("2013-12-23 Dream 7");
+		items.add("2013-12-24 Dream 8");
+		items.add("2013-12-25 Dream 9");
+		items.add("2013-12-23 Dream 10");
+		items.add("2013-12-24 Dream 11");
+		items.add("2013-12-25 Dream 12");
+		items.add("2013-12-23 Dream 1");
+		items.add("2013-12-24 Dream 2");
+		items.add("2013-12-25 Dream 3");
+		items.add("2013-12-23 Dream 4");
+		items.add("2013-12-24 Dream 5");
+		items.add("2013-12-25 Dream 6");
+		items.add("2013-12-23 Dream 7");
+		items.add("2013-12-24 Dream 8");
+		items.add("2013-12-25 Dream 9");
+		items.add("2013-12-23 Dream 10");
+		items.add("2013-12-24 Dream 11");
+		items.add("2013-12-25 Dream 12");
 
 		// The test version temporally doesn't retrieve data from
 		// AddDreamActivity
@@ -73,8 +101,7 @@ public class DiaryBookActivity extends ListActivity {
 		// itemArray[i] = (String)items.get(i);
 		// }
 
-		setListAdapter(new ArrayAdapter<String>(this,
-				R.layout.activity_diary_book_row, R.id.dreamAbsTextView, items));
+		setListAdapter(new LabeledAdapter(this));
 	}
 	
 	@Override
@@ -105,5 +132,31 @@ public class DiaryBookActivity extends ListActivity {
 	 * public void startMeActivity(View view) { Intent intent = new Intent(this,
 	 * MeActivity.class); startActivity(intent); }
 	 */
+	
+	class LabeledAdapter extends ArrayAdapter<String>{
+		Activity context;
+		
+		LabeledAdapter(Activity context){
+			super(context, R.layout.activity_diary_book_row, items);
+			
+			this.context = context;
+		}
+		
+		public View getView (int position, View convertView, ViewGroup parent){
+			LayoutInflater inflater = context.getLayoutInflater();
+			View row = inflater.inflate(R.layout.activity_diary_book_row, null);
+			TextView dreamAbs = (TextView)row.findViewById(R.id.dreamAbsTextView);
+			
+			dreamAbs.setText(items.get(position));
+			
+			if(items.get(position).contains("7")){
+				TextView dreamTypeTextView = (TextView)row.findViewById(R.id.dreamTypeTextView);
+				
+				dreamTypeTextView.setText("Lucid");
+			}
+			
+			return (row);
+		}
+	}
 
 }
