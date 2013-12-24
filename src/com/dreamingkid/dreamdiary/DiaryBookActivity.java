@@ -143,12 +143,19 @@ public class DiaryBookActivity extends ListActivity {
 		}
 		
 		public View getView (int position, View convertView, ViewGroup parent){
-			LayoutInflater inflater = context.getLayoutInflater();
-			View row = inflater.inflate(R.layout.activity_diary_book_row, null);
+			View row = convertView;
+			
+			if(row == null){
+				LayoutInflater inflater = context.getLayoutInflater();
+				row = inflater.inflate(R.layout.activity_diary_book_row, null);
+			}
+			
 			TextView dreamAbs = (TextView)row.findViewById(R.id.dreamAbsTextView);
 			
 			dreamAbs.setText(items.get(position));
 			
+			//the if condition is for test purpose
+			//the implementation should be modified in the future
 			if(items.get(position).contains("7")){
 				TextView dreamTypeTextView = (TextView)row.findViewById(R.id.dreamTypeTextView);
 				
