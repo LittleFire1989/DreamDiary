@@ -1,20 +1,19 @@
 package com.dreamingkid.dreamdiary;
 
-import java.util.Calendar;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.GregorianCalendar;
-
-import com.dreamingkid.dreamdiary.R;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.dreamingkid.dream.Dream;
+import com.dreamingkid.dream.Scenario;
 
 /*
  * Programming plan:
@@ -28,7 +27,11 @@ import android.widget.ImageView;
 public class AddDreamActivity extends Activity {
 	ImageView saveImageButton;
 	EditText dreamContentEditText;
-
+	TextView textLoadDataTextView;
+	
+	private DiaryBook book;
+	private Dream d;
+	
 	String dreamTime = "dreamTime";
 	String dreamTitle = "dreamTitle";
 
@@ -41,19 +44,12 @@ public class AddDreamActivity extends Activity {
 		saveImageButton = (ImageView) this.findViewById(R.id.saveImageView);
 		dreamContentEditText = (EditText) this
 				.findViewById(R.id.dreamContentEditText);
+		textLoadDataTextView = (TextView) this.findViewById(R.id.textLoadDataTextView);
 
 		saveImageButton
 				.setOnClickListener(new SaveImageViewOnClickListener());
 
-		Calendar dreamTimeCalendar = new GregorianCalendar();
-		dreamTimeCalendar.setTime(new Date());
-		dreamTime = dreamTimeCalendar.get(Calendar.YEAR) + "/"
-				+ dreamTimeCalendar.get(Calendar.MONTH) + "/"
-				+ dreamTimeCalendar.get(Calendar.DAY_OF_MONTH) + " "
-				+ dreamTimeCalendar.get(Calendar.HOUR_OF_DAY) + ": "
-				+ dreamTimeCalendar.get(Calendar.MINUTE);
-		
-
+		book = new DiaryBook(this.getBaseContext());
 	}
 
 	@Override
@@ -62,21 +58,26 @@ public class AddDreamActivity extends Activity {
 		getMenuInflater().inflate(R.menu.new_dream, menu);
 		return true;
 	}
+	
 
 	class SaveImageViewOnClickListener implements OnClickListener {
 
 		@Override
 		public void onClick(View v) {
-			dreamTitle = dreamContentEditText.getText().toString();
-			if(dreamTitle.length() > 10){
-				dreamTitle = dreamTitle.substring(0, 10);
-			}
-			Intent i = new Intent(AddDreamActivity.this,
-					DiaryBookActivity.class);
-			i.putExtra("dream_time", dreamTime);
-			i.putExtra("dream_title", dreamTitle);
-			startActivity(i);
-			finish();
+			d = new Dream();
+			
+			d.setAbstraction(dreamContentEditText.getText().toString());
+			d.setLastEditedTime(new Date());
+			
+			Scenario s= new Scenario();
+			s.setContent(dreamContentEditText.getText().toString());
+			ArrayList<Scenario> scenarios = new ArrayList<Scenario>();
+			scenarios.add(s);
+			d.setScenarios(scenarios);
+			
+			book.addDream(d);
+			
+			book.saveDreams();
 		}
 
 	}

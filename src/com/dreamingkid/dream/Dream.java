@@ -30,7 +30,7 @@ public class Dream {
 	private Date sleepStartTime;
 	private Date sleepEndTime;
 	private Date lastEditedTime;
-	private ArrayList<ScenarioNote> scenarios;
+	private ArrayList<Scenario> scenarios;
 	private String abstraction; 
 
 	// Methods that set and get attributes
@@ -55,7 +55,7 @@ public class Dream {
 		this.lastEditedTime = lastEditedTime;
 	}
 	
-	public void setScenarios(ArrayList<ScenarioNote> scenarios){
+	public void setScenarios(ArrayList<Scenario> scenarios){
 		this.scenarios = scenarios;
 	}
 	public void setAbstraction(String abstraction){
@@ -84,7 +84,7 @@ public class Dream {
 		return this.lastEditedTime;
 	}
 	
-	public ArrayList<ScenarioNote> getScenarios(){
+	public ArrayList<Scenario> getScenarios(){
 		return this.scenarios;
 	}
 	public String getAbstraction(){
@@ -108,7 +108,7 @@ public class Dream {
 	public Dream() {
 		keywords = Dream.DEFAULT_KEYWORDS;
 		lucidity = Dream.NORMAL;
-		lastEditedTime = new Date();
+//		lastEditedTime = new Date();
 		sleepEndTime = new Date();
 	}
 
@@ -120,12 +120,12 @@ public class Dream {
 	public Dream(JSONObject json) throws JSONException{
 		abstraction = json.getString(JSON_TITLE);
 		
-		scenarios = new ArrayList<ScenarioNote>();
-		ScenarioNote s = new ScenarioNote();
+		scenarios = new ArrayList<Scenario>();
+		Scenario s = new Scenario();
 		s.setContent(json.getString(JSON_CONTENT));
 		scenarios.add(s);
 		
-		lastEditedTime = (Date)json.get(JSON_DATE);
+//		lastEditedTime = (Date)json.get(JSON_DATE);
 	}
 	
 	// use JSON

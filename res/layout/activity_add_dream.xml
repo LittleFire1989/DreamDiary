@@ -62,11 +62,15 @@
         <EditText
             android:id="@+id/dreamContentEditText"
             android:layout_width="match_parent"
-            android:layout_height="431dp"
+            android:layout_height="200dp"
             android:ems="500"
             android:gravity="center_vertical|top"
             android:hint="I dreamed..."
             android:textSize="14dp" />
+        <TextView
+            android:id="@+id/textLoadDataTextView"
+            android:layout_width = "match_parent"
+            android:layout_height = "fill_parent" />
     </FrameLayout>
 
 </LinearLayout>

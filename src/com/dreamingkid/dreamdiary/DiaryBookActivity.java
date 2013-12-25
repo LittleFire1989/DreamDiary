@@ -16,6 +16,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.dreamingkid.dream.Dream;
+
 /*
  * Programming plan:
  * Step 0: display with fancy list; click the items will navigate to the view dream
@@ -27,13 +29,17 @@ import android.widget.TextView;
 
 public class DiaryBookActivity extends ListActivity {
 	Button addDream;
-	ArrayList<String> items = new ArrayList<String>();
+	ArrayList<Dream> dreams = new ArrayList<Dream>();
+	
+	DiaryBook book;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_diary_book);
-
+		book = new DiaryBook(this.getBaseContext());
+		dreams = book.mDreams;
+		
 		// implement the add dream button's function
 		addDream = (Button) this.findViewById(R.id.addDream);
 		addDream.setOnClickListener(new OnClickListener() {
@@ -44,44 +50,7 @@ public class DiaryBookActivity extends ListActivity {
 			}
 		});
 		
-		//initialize the test data of items
-		items.add("2013-12-23 Dream 1");
-		items.add("2013-12-24 Dream 2");
-		items.add("2013-12-25 Dream 3");
-		items.add("2013-12-23 Dream 4");
-		items.add("2013-12-24 Dream 5");
-		items.add("2013-12-25 Dream 6");
-		items.add("2013-12-23 Dream 7");
-		items.add("2013-12-24 Dream 8");
-		items.add("2013-12-25 Dream 9");
-		items.add("2013-12-23 Dream 10");
-		items.add("2013-12-24 Dream 11");
-		items.add("2013-12-25 Dream 12");
-		items.add("2013-12-23 Dream 1");
-		items.add("2013-12-24 Dream 2");
-		items.add("2013-12-25 Dream 3");
-		items.add("2013-12-23 Dream 4");
-		items.add("2013-12-24 Dream 5");
-		items.add("2013-12-25 Dream 6");
-		items.add("2013-12-23 Dream 7");
-		items.add("2013-12-24 Dream 8");
-		items.add("2013-12-25 Dream 9");
-		items.add("2013-12-23 Dream 10");
-		items.add("2013-12-24 Dream 11");
-		items.add("2013-12-25 Dream 12");
-		items.add("2013-12-23 Dream 1");
-		items.add("2013-12-24 Dream 2");
-		items.add("2013-12-25 Dream 3");
-		items.add("2013-12-23 Dream 4");
-		items.add("2013-12-24 Dream 5");
-		items.add("2013-12-25 Dream 6");
-		items.add("2013-12-23 Dream 7");
-		items.add("2013-12-24 Dream 8");
-		items.add("2013-12-25 Dream 9");
-		items.add("2013-12-23 Dream 10");
-		items.add("2013-12-24 Dream 11");
-		items.add("2013-12-25 Dream 12");
-
+		
 		// The test version temporally doesn't retrieve data from
 		// AddDreamActivity
 
@@ -135,11 +104,11 @@ public class DiaryBookActivity extends ListActivity {
 	 * MeActivity.class); startActivity(intent); }
 	 */
 	
-	class LabeledAdapter extends ArrayAdapter<String>{
+	class LabeledAdapter extends ArrayAdapter<Dream>{
 		Activity context;
 		
 		LabeledAdapter(Activity context){
-			super(context, R.layout.activity_diary_book_row, items);
+			super(context, R.layout.activity_diary_book_row, dreams);
 			
 			this.context = context;
 		}
@@ -158,16 +127,7 @@ public class DiaryBookActivity extends ListActivity {
 				wrapper = (ViewWrapper)row.getTag();
 			}
 			
-			wrapper.getDreamAbsTextView().setText(items.get(position));
-			
-			//the if condition is for test purpose
-			//the implementation should be modified in the future
-			if(items.get(position).contains("7")){
-				wrapper.getDreamTypeTextView().setText("Lucid");
-			}
-			else{
-				wrapper.getDreamTypeTextView().setText("Normal");
-			}
+			wrapper.getDreamAbsTextView().setText(dreams.get(position).getAbstraction());
 			
 			return (row);
 		}

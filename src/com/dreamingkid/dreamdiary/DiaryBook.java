@@ -12,16 +12,22 @@ public class DiaryBook {
 	private static final String TAG = "DiaryBook";
 	private static final String FILENAME = "dreams.json";
 	
-	private ArrayList<Dream> mDreams;
+	public ArrayList<Dream> mDreams;
 	private DreamIntentJSONSerializer mSerializer;
 	
 	private static DiaryBook sDiaryBook;
 	private Context mAppContext;
 	
-	private DiaryBook(Context appContext){
+	public DiaryBook(Context appContext){
 		mAppContext = appContext;
-		mDreams = new ArrayList<Dream>();
 		mSerializer = new DreamIntentJSONSerializer(mAppContext, FILENAME);
+		
+		try{
+			mDreams = mSerializer.loadDreams();
+		} catch(Exception e){
+			mDreams = new ArrayList<Dream>();
+			Log.e(TAG, "Error loading dreams: ", e);
+		}
 	}
 	
 	public void addDream(Dream d){

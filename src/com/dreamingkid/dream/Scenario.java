@@ -9,7 +9,7 @@ import java.util.Date;
  * 2. the implementation for recording
  */
 
-public class ScenarioNote {
+public class Scenario {
 	private String content;
 	private Date lastEditedTime;
 	private ArrayList<Recording> recordings;
