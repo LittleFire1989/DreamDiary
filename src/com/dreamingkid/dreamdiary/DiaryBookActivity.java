@@ -120,6 +120,8 @@ public class DiaryBookActivity extends ListActivity {
 		getMenuInflater().inflate(R.menu.diary_book, menu);
 		return true;
 	}
+	
+	
 	/*
 	 * The first version only has the dream record function
 	 * 

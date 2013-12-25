@@ -116,9 +116,23 @@ public class Dream {
 		this.lucidity = lucidity;
 		this.keywords = keywords;
 	}
+	
+	public Dream(JSONObject json) throws JSONException{
+		abstraction = json.getString(JSON_TITLE);
+		
+		scenarios = new ArrayList<ScenarioNote>();
+		ScenarioNote s = new ScenarioNote();
+		s.setContent(json.getString(JSON_CONTENT));
+		scenarios.add(s);
+		
+		lastEditedTime = (Date)json.get(JSON_DATE);
+	}
+	
+	// use JSON
 
 	public Object toJSON() throws JSONException {
-
+		//To be modified: the data relations are not designed, after redesign the database, 
+		//this part should be updated.
 		JSONObject json = new JSONObject();
 		json.put(JSON_TITLE, abstraction);
 		json.put(JSON_CONTENT, scenarios.get(0).getContent());
@@ -126,6 +140,11 @@ public class Dream {
 		return json;
 		
 	}
+	
+	public String toString(){
+		return abstraction;
+	}
+	
 
 	
 	// inner classes: Note, Recording
