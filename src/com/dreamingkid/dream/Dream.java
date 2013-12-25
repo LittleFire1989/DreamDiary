@@ -4,6 +4,9 @@ package com.dreamingkid.dream;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /* To be modified:
  * publish()
  * editDream()
@@ -16,6 +19,11 @@ public class Dream {
 	public static final int NORMAL = 1;
 	public static final int HALFLUCID = 2;
 	public static final int LUCID = 3;
+	
+	private static final String JSON_ID = "id";
+	private static final String JSON_TITLE = "title";
+	private static final String JSON_CONTENT = "content";
+	private static final String JSON_DATE = "date";
 
 	private String[] keywords;
 	private int lucidity;
@@ -107,6 +115,16 @@ public class Dream {
 	public Dream(short lucidity, String[] keywords) {
 		this.lucidity = lucidity;
 		this.keywords = keywords;
+	}
+
+	public Object toJSON() throws JSONException {
+
+		JSONObject json = new JSONObject();
+		json.put(JSON_TITLE, abstraction);
+		json.put(JSON_CONTENT, scenarios.get(0).getContent());
+		json.put(JSON_DATE, lastEditedTime);
+		return json;
+		
 	}
 
 	
