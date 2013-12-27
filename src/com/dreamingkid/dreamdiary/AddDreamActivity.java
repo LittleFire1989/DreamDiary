@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dreamingkid.dream.Dream;
-import com.dreamingkid.dream.Scenario;
 
 /*
  * Programming plan:
@@ -66,14 +65,9 @@ public class AddDreamActivity extends Activity {
 		public void onClick(View v) {
 			d = new Dream();
 			
-			d.setAbstraction(dreamContentEditText.getText().toString());
+			d.setTitle(dreamContentEditText.getText().toString());
 			d.setLastEditedTime(new Date());
-			
-			Scenario s= new Scenario();
-			s.setContent(dreamContentEditText.getText().toString());
-			ArrayList<Scenario> scenarios = new ArrayList<Scenario>();
-			scenarios.add(s);
-			d.setScenarios(scenarios);
+			d.setContent(dreamContentEditText.getText().toString());
 			
 			book.addDream(d);
 			

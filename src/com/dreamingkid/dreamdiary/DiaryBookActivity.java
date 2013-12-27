@@ -127,7 +127,7 @@ public class DiaryBookActivity extends ListActivity {
 				wrapper = (ViewWrapper)row.getTag();
 			}
 			
-			wrapper.getDreamAbsTextView().setText(dreams.get(position).getAbstraction());
+			wrapper.getDreamAbsTextView().setText(dreams.get(position).getTitle());
 			
 			return (row);
 		}

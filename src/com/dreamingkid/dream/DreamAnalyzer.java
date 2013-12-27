@@ -121,7 +121,7 @@ public class DreamAnalyzer {
 		int size = dreams.size();
 		Date[] timeArray = new Date[size];
 		for (int i = 0; i < size; i++) {
-			timeArray[i] = dreams.get(i).getSleepStartTime();
+			timeArray[i] = dreams.get(i).getSleep().getBeginTime();
 		}
 		return calcAvgTime(timeArray);
 	}
@@ -130,7 +130,7 @@ public class DreamAnalyzer {
 		int size = dreams.size();
 		Date[] timeArray = new Date[size];
 		for (int i = 0; i < size; i++) {
-			timeArray[i] = dreams.get(i).getSleepEndTime();
+			timeArray[i] = dreams.get(i).getSleep().getEndTime();
 		}
 		return calcAvgTime(timeArray);
 	}
@@ -144,9 +144,9 @@ public class DreamAnalyzer {
 		ArrayList<String> contents = new ArrayList<String> ();
 		for(int i = 0; i < dreams.size(); i++){
 			String content = "";
-			for(int j = 0; j < dreams.get(i).getScenarios().size(); j++){
-				content = content + dreams.get(i).getScenarios().get(j).getContent();
-			}
+
+			content = content + dreams.get(i).getContent();
+
 			contents.add(content);
 		}
 		return mostOftenWords((String[])contents.toArray(), topX);

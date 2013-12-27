@@ -27,14 +27,22 @@ public class Dream {
 
 	private String[] keywords;
 	private int lucidity;
-	private Date sleepStartTime;
-	private Date sleepEndTime;
 	private Date lastEditedTime;
-	private ArrayList<Scenario> scenarios;
-	private String abstraction; 
+	private String content;
+	private ArrayList<Recording> recordings;
+	private String title; 
+	private Sleep sleep;
+	private ArrayList<Label> labels;
 
 	// Methods that set and get attributes
-
+	public void setLabels(ArrayList<Label> labels){
+		this.labels = labels;
+	}
+	
+	public void setSleep(Sleep s){
+		sleep = s;
+	}
+	
 	public void setKeywords(String[] keywords) {
 		this.keywords = keywords;
 	}
@@ -43,27 +51,28 @@ public class Dream {
 		this.lucidity = lucidity;
 	}
 
-	public void setSleepStartTime(Date sleepStartTime) {
-		this.sleepStartTime = sleepStartTime;
-	}
-
-	public void setSleepEndTime(Date sleepEndTime) {
-		this.sleepEndTime = sleepEndTime;
-	}
-
 	public void setLastEditedTime(Date lastEditedTime) {
 		this.lastEditedTime = lastEditedTime;
 	}
 	
-	public void setScenarios(ArrayList<Scenario> scenarios){
-		this.scenarios = scenarios;
+	public void setTitle(String title){
+		this.title = title;
 	}
-	public void setAbstraction(String abstraction){
-		this.abstraction = abstraction;
+	
+	public void setContent(String c){
+		content = c;
 	}
 
 	
 	//gets
+	public ArrayList<Label> getLables(){
+		return labels;
+	}
+	
+	public Sleep getSleep(){
+		return sleep;
+	}
+	
 	public String[] getKeywords() {
 		return this.keywords;
 	}
@@ -72,23 +81,17 @@ public class Dream {
 		return this.lucidity;
 	}
 
-	public Date getSleepStartTime() {
-		return this.sleepStartTime;
-	}
-
-	public Date getSleepEndTime() {
-		return this.sleepEndTime;
-	}
-
 	public Date getLastEditedTime() {
 		return this.lastEditedTime;
 	}
 	
-	public ArrayList<Scenario> getScenarios(){
-		return this.scenarios;
+	public String getTitle() {
+		return title;
 	}
-	public String getAbstraction(){
-		return this.abstraction;
+	
+	public String getContent() {
+		
+		return content;
 	}
 
 	// publish
@@ -108,8 +111,7 @@ public class Dream {
 	public Dream() {
 		keywords = Dream.DEFAULT_KEYWORDS;
 		lucidity = Dream.NORMAL;
-//		lastEditedTime = new Date();
-		sleepEndTime = new Date();
+		lastEditedTime = new Date();
 	}
 
 	public Dream(short lucidity, String[] keywords) {
@@ -118,12 +120,9 @@ public class Dream {
 	}
 	
 	public Dream(JSONObject json) throws JSONException{
-		abstraction = json.getString(JSON_TITLE);
+		title = json.getString(JSON_TITLE);
 		
-		scenarios = new ArrayList<Scenario>();
-		Scenario s = new Scenario();
-		s.setContent(json.getString(JSON_CONTENT));
-		scenarios.add(s);
+		content = json.getString(JSON_CONTENT);
 		
 //		lastEditedTime = (Date)json.get(JSON_DATE);
 	}
@@ -134,16 +133,20 @@ public class Dream {
 		//To be modified: the data relations are not designed, after redesign the database, 
 		//this part should be updated.
 		JSONObject json = new JSONObject();
-		json.put(JSON_TITLE, abstraction);
-		json.put(JSON_CONTENT, scenarios.get(0).getContent());
+		json.put(JSON_TITLE, title);
+		json.put(JSON_CONTENT, content);
 		json.put(JSON_DATE, lastEditedTime);
 		return json;
 		
 	}
 	
 	public String toString(){
-		return abstraction;
+		return title;
 	}
+
+	
+
+
 	
 
 	
