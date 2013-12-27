@@ -1,6 +1,7 @@
 package com.dreamingkid.dream;
 
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -133,6 +134,11 @@ public class Dream {
 		//To be modified: the data relations are not designed, after redesign the database, 
 		//this part should be updated.
 		JSONObject json = new JSONObject();
+		
+		String lastEditedTime;
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		lastEditedTime = sdf.format(this.lastEditedTime);
+		
 		json.put(JSON_TITLE, title);
 		json.put(JSON_CONTENT, content);
 		json.put(JSON_DATE, lastEditedTime);
@@ -143,12 +149,4 @@ public class Dream {
 	public String toString(){
 		return title;
 	}
-
-	
-
-
-	
-
-	
-	// inner classes: Note, Recording
 }
