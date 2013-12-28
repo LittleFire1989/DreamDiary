@@ -11,4 +11,26 @@ public class Label {
 	public static String PREDICTIVE = "PREDICTIVE";
 	public static String NIGHTMARE = "NIGHTMARE";
 	public static String DIVINE = "DIVINE"; 
+	
+	private String name;
+	private int number;
+	
+	// sets
+	public void setName(String name){
+		this.name=name;
+	}
+	
+	public void setNumber(int number){
+		this.number = number;
+	}
+	
+	// gets
+	public String getName(){
+		return name;
+	}
+	
+	public int getNumber(){
+		return number;
+	}
+	
 }

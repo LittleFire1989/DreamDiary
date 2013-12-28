@@ -1,6 +1,5 @@
 package com.dreamingkid.dream;
 
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -20,30 +19,57 @@ public class Dream {
 	public static final int NORMAL = 1;
 	public static final int HALFLUCID = 2;
 	public static final int LUCID = 3;
-	
+
 	private static final String JSON_ID = "id";
 	private static final String JSON_TITLE = "title";
 	private static final String JSON_CONTENT = "content";
 	private static final String JSON_DATE = "date";
 
+	private long id;
 	private String[] keywords;
 	private int lucidity;
 	private Date lastEditedTime;
 	private String content;
 	private ArrayList<Recording> recordings;
-	private String title; 
+	private String title;
 	private Sleep sleep;
 	private ArrayList<Label> labels;
 
+	// constructors
+
+	public Dream() {
+		id = -1;
+		keywords = Dream.DEFAULT_KEYWORDS;
+		lucidity = Dream.NORMAL;
+		lastEditedTime = new Date();
+	}
+
+	public Dream(short lucidity, String[] keywords) {
+		id = -1;
+		this.lucidity = lucidity;
+		this.keywords = keywords;
+	}
+
+	public Dream(JSONObject json) throws JSONException {
+		id = -1;
+		title = json.getString(JSON_TITLE);
+		content = json.getString(JSON_CONTENT);
+		// lastEditedTime = (Date)json.get(JSON_DATE);
+	}
+
 	// Methods that set and get attributes
-	public void setLabels(ArrayList<Label> labels){
+	public void setId(long id){
+		this.id= id;
+	}
+	
+	public void setLabels(ArrayList<Label> labels) {
 		this.labels = labels;
 	}
-	
-	public void setSleep(Sleep s){
+
+	public void setSleep(Sleep s) {
 		sleep = s;
 	}
-	
+
 	public void setKeywords(String[] keywords) {
 		this.keywords = keywords;
 	}
@@ -55,25 +81,28 @@ public class Dream {
 	public void setLastEditedTime(Date lastEditedTime) {
 		this.lastEditedTime = lastEditedTime;
 	}
-	
-	public void setTitle(String title){
+
+	public void setTitle(String title) {
 		this.title = title;
 	}
-	
-	public void setContent(String c){
+
+	public void setContent(String c) {
 		content = c;
 	}
 
+	// gets
+	public long getId(){
+		return id;
+	}
 	
-	//gets
-	public ArrayList<Label> getLables(){
+	public ArrayList<Label> getLables() {
 		return labels;
 	}
-	
-	public Sleep getSleep(){
+
+	public Sleep getSleep() {
 		return sleep;
 	}
-	
+
 	public String[] getKeywords() {
 		return this.keywords;
 	}
@@ -85,13 +114,13 @@ public class Dream {
 	public Date getLastEditedTime() {
 		return this.lastEditedTime;
 	}
-	
+
 	public String getTitle() {
 		return title;
 	}
-	
+
 	public String getContent() {
-		
+
 		return content;
 	}
 
@@ -107,46 +136,26 @@ public class Dream {
 
 	}
 
-	// constructors
-
-	public Dream() {
-		keywords = Dream.DEFAULT_KEYWORDS;
-		lucidity = Dream.NORMAL;
-		lastEditedTime = new Date();
-	}
-
-	public Dream(short lucidity, String[] keywords) {
-		this.lucidity = lucidity;
-		this.keywords = keywords;
-	}
-	
-	public Dream(JSONObject json) throws JSONException{
-		title = json.getString(JSON_TITLE);
-		
-		content = json.getString(JSON_CONTENT);
-		
-//		lastEditedTime = (Date)json.get(JSON_DATE);
-	}
-	
 	// use JSON
 
 	public Object toJSON() throws JSONException {
-		//To be modified: the data relations are not designed, after redesign the database, 
-		//this part should be updated.
+		// To be modified: the data relations are not designed, after redesign
+		// the database,
+		// this part should be updated.
 		JSONObject json = new JSONObject();
-		
+
 		String lastEditedTime;
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		lastEditedTime = sdf.format(this.lastEditedTime);
-		
+
 		json.put(JSON_TITLE, title);
 		json.put(JSON_CONTENT, content);
 		json.put(JSON_DATE, lastEditedTime);
 		return json;
-		
+
 	}
-	
-	public String toString(){
+
+	public String toString() {
 		return title;
 	}
 }
